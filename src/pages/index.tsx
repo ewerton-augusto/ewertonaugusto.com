@@ -15,14 +15,16 @@ const Home: React.FC = () => {
         textAlign: "center",
         boxSizing: "border-box"
       }}>
-        <img src="/assets/images/ewerton-augusto-logo.svg" alt="Ewerton Augusto" width={200} style={{
+        <img src="/assets/images/ewerton-augusto-logo.svg" alt="Ewerton Augusto" style={{
           margin: "16px auto",
+          width: "100%",
+          maxWidth: "180px"
         }} />
         <h1 style={{
-          fontSize: "2rem"
+          fontSize: "2.5rem"
         }}>Coming soon</h1>
         <p style={{
-          margin: "10px 0 16px"
+          margin: "10px 0 18px"
         }}>Website is under construction</p>
         <p>
           Contact: <a href="mailto:ewerton.santos2210@gmail.com">ewerton.santos2210@gmail.com</a>
