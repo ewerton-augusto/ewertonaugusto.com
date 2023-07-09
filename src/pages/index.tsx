@@ -1,34 +1,27 @@
 import React from 'react';
 import GlobalLayout from '../layout/GlobalLayout';
+import IconLink from '../components/Icons/IconLink';
 
 const Home: React.FC = () => {
   return (
     <GlobalLayout>
-      <section style={{
-        width: "100vw",
-        height: "100vh",
-        padding: "16px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignContent: "center",
-        textAlign: "center",
-        boxSizing: "border-box"
-      }}>
-        <img src="/assets/images/ewerton-augusto-logo.svg" alt="Ewerton Augusto" style={{
-          margin: "16px auto",
-          width: "100%",
-          maxWidth: "180px"
-        }} />
-        <h1 style={{
-          fontSize: "2.5rem"
-        }}>Coming soon</h1>
-        <p style={{
-          margin: "10px 0 18px"
-        }}>Website is under construction</p>
-        <p>
-          Contact: <a href="mailto:ewerton.santos2210@gmail.com">ewerton.santos2210@gmail.com</a>
+      <section className="w-screen h-screen p-4 flex flex-col justify-center items-center text-center box-border">
+        <img src="/assets/images/ewerton-augusto-logo.svg" alt="Ewerton Augusto" className="mx-auto my-4 w-full max-w-[180px]" />
+        <h1 className='text-4xl'>Coming soon</h1>
+        <p className='mt-4 mb-5 w-full max-w-2xl'>
+          Hi, I am <strong>Ewerton Augusto a Front-end Engineer</strong>. Thanks for visiting my website. At the moment it is under construction, even though you can contact me via:
         </p>
+        <ul className='flex gap-4'>
+          <li>
+            <IconLink icon='' label='LinkedIn' url="https://www.linkedin.com/in/ewerton-augusto/" />
+          </li>
+          <li>
+            <IconLink icon='' label='GitHub' url="https://github.com/ewerton-augusto" />
+          </li>
+          <li>
+            <IconLink icon='' label='E-mail' url="mailto:ewerton.santos2210@gmail.com" />
+          </li>
+        </ul>
       </section>
     </GlobalLayout>
   )
