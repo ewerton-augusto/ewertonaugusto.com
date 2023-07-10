@@ -12,7 +12,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
 
   const handleSubmit = () => {
     if (answer.toLocaleLowerCase() === password) {
-      localStorage.setItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZZ, "passed");
+      localStorage.setItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZ, "passed");
       router.push("/birthday-2023/confirmar");
     } else {
       setError(true);
@@ -25,7 +25,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
   const handleSubmitEnter = (event) => (event.keyCode === 13) && handleSubmit();
   
   useEffect(() => {
-    localStorage.removeItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZZ);
+    localStorage.removeItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZ);
     inputRef.current.focus();
   }, []);
 

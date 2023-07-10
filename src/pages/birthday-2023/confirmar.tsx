@@ -14,7 +14,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const localToken = localStorage.getItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZZ);
+    const localToken = localStorage.getItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZ);
     if (localToken && localToken === "passed") {
       setIsLoading(false);
       return;
