@@ -110,7 +110,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
               <p>Confirmar sua presença ilustre: <span className='font-semibold'>29/09/2023</span></p>
               <p>Transferir divisão dos custos: <span className='font-semibold'>06/10/2023</span></p>
             </div>
-            <div className='w-full max-w-3xl text-left mx-auto'>
+            <div className='w-full max-w-[400px] text-left mx-auto'>
               <label htmlFor='guest' className='text-white text-2xl font-bold'>
                 Apelido ou Nome:
               </label>
@@ -119,13 +119,15 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
                   id="guest"
                   type="text"
                   name="guest"
-                  className='w-full h-10 p-2 pr-[130px] rounded-lg outline-dark-purple border-2 border-purple pb-3 text-black'
+                  className='w-full h-10 p-2 rounded-lg outline-dark-purple border-2 border-purple pb-3 text-black'
                   onChange={(e) => setGuest(e.target.value)}
                   onKeyUp={handleSubmitEnter}
                   value={guest}
                   placeholder='Informe seu apelido ou nome'
                 />
-                <button className='absolute text-white bg-dark-purple right-0 px-4 py-2 h-10 rounded-r-lg font-bold' onClick={handleSubmit}>CONFIRMAR PRESENÇA</button>
+
+                <button className='w-full text-white bg-dark-purple px-4 py-2 h-10 rounded-lg font-bold mt-6' onClick={handleSubmit}>CONFIRMAR PRESENÇA</button>
+
                 {error && <div className='absolute -bottom-10 text-white'>
                   {erroMsg}
                 </div>}

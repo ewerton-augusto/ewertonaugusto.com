@@ -50,24 +50,24 @@ const Timeout: React.FC = () => {
   return (
     <div className='flex justify-center items-center gap-4'>
       <div className='flex flex-col gap-1 items-center justify-center  pr-4 border-r-2 border-purple border-opacity-30'>
-        <span className='text-purple text-6xl font-semibold'>{timeLeft.months}</span>
-        <div className='text-xl uppercase'>Meses</div>
+        <span className='text-purple text-5xl max-sm:text-lg font-semibold'>{timeLeft.months}</span>
+        <div className='text-sm max-sm:text-xl uppercase'>Meses</div>
       </div>
       <div className='flex flex-col gap-1 items-center justify-center pr-4 border-r-2 border-purple border-opacity-30'>
-        <span className='text-purple text-6xl font-semibold'>{timeLeft.days}</span>
-        <div className='text-xl uppercase'>Dias</div>
+        <span className='text-purple text-5xl max-sm:text-lg font-semibold'>{timeLeft.days}</span>
+        <div className='text-sm max-sm:text-xl uppercase'>Dias</div>
       </div>
       <div className='flex flex-col gap-1 items-center justify-center  pr-4 border-r-2 border-purple border-opacity-30'>
-        <span className='text-purple text-6xl font-semibold'>{timeLeft.hours}</span>
-        <div className='text-xl uppercase'>Horas</div>
+        <span className='text-purple text-5xl max-sm:text-lg font-semibold'>{timeLeft.hours}</span>
+        <div className='text-sm max-sm:text-xl uppercase'>Horas</div>
       </div>
       <div className='flex flex-col gap-1 items-center justify-center  pr-4 border-r-2 border-purple border-opacity-30'>
-        <span className='text-purple text-6xl font-semibold'>{timeLeft.minutes}</span>
-        <div className='text-xl uppercase'>Min</div>
+        <span className='text-purple text-5xl max-sm:text-lg font-semibold'>{timeLeft.minutes}</span>
+        <div className='text-sm max-sm:text-xl uppercase'>Min</div>
       </div>
       <div className='flex flex-col gap-1 items-center justify-center'>
-        <span className='text-purple text-6xl font-semibold'>{timeLeft.seconds}</span>
-        <div className='text-xl uppercase'>Sec</div>
+        <span className='text-purple text-5xl max-sm:text-lg font-semibold'>{timeLeft.seconds}</span>
+        <div className='text-sm max-sm:text-xl uppercase'>Sec</div>
       </div>
     </div>
   )
