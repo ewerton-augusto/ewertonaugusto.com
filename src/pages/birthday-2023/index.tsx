@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import GlobalLayout from '../../layout/GlobalLayout';
 import BirthHeader from '../../components/birth/header/Header';
+import { LocalStorageEnum } from '../../enum/localStorageEnum';
 
 const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
   const router = useRouter();
@@ -11,6 +12,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
 
   const handleSubmit = () => {
     if (answer.toLocaleLowerCase() === password) {
+      localStorage.setItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZZ, "passed");
       router.push("/birthday-2023/confirmar");
     } else {
       setError(true);
@@ -19,10 +21,11 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
       setTimeout(() => setError(false), 5000)
     }
   }
-
+  
   const handleSubmitEnter = (event) => (event.keyCode === 13) && handleSubmit();
-
+  
   useEffect(() => {
+    localStorage.removeItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZZ);
     inputRef.current.focus();
   }, []);
 
@@ -34,7 +37,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
         <BirthHeader />
         <section className='flex items-center justify-center h-full w-full'>
           <div className='w-full max-w-3xl'>
-            <label htmlFor='answer' className='text-white text-5xl font-bold'>
+            <label htmlFor='answer' className='text-white max-sm:text-3xl text-5xl font-bold'>
               <span className='text-purple'>Quem </span>nunca para de <span className='text-purple'> crescer </span>?
             </label>
             <div className='relative w-full mt-4'>
@@ -42,7 +45,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
                 id="answer"
                 type="text"
                 name="response"
-                className='w-full h-10 p-2 pr-[130px] rounded-lg outline-dark-purple border-2 border-purple pb-3'
+                className='w-full h-10 p-2 pr-[130px] rounded-lg outline-purple border-2 border-purple pb-3'
                 onChange={(e) => setAnswer(e.target.value)}
                 onKeyUp={handleSubmitEnter}
                 value={answer}
