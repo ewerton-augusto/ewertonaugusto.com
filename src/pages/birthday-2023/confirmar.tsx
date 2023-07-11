@@ -3,82 +3,79 @@ import { useRouter } from 'next/router';
 import GlobalLayout from '../../layout/GlobalLayout';
 import BirthHeader from '../../components/birth/header/Header';
 import SimpleCard from '../../components/birth/cards/SimpleCard';
-import Timeout from '../../components/birth/timeout/Timeout';
 import { LocalStorageEnum } from '../../enum/localStorageEnum';
-import { ref, getDownloadURL } from "firebase/storage";
-import { storage } from '../../services/firebase';
+import SectionDueDate from '../../components/birth/sections/SectionDueDate';
 
-const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests, guestAPI }) => {
+const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, apiURL }) => {
   const router = useRouter();
   const [guest, setGuest] = useState("");
-  const [guestsList, setGuestsList] = useState([]);
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-
-  const getListGuests = async () => {
-    try {
-      const storageRef = ref(storage, "guests.json")
-      const response = await getDownloadURL(storageRef);
-      const guestListData = await fetch(response);
-      const guestListJson = await guestListData.json();
-      setGuestsList(guestListJson);
-      console.log(guestListJson);
-    } catch (error) {
-      setGuestsList([]);
-      console.error(error);
-    }
-  }
 
   useEffect(() => {
     const localToken = localStorage.getItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZ);
     if (localToken && localToken === "passed") {
       setIsLoading(false);
-      getListGuests();
       return;
     }
     router.push("/birthday-2023");
   }, []);
 
   const handleSubmit = async () => {
-    const currentDate = new Date();
-    const dueDate = new Date('September 30, 2023 00:00:00');
-    if (guests && guest.length === 14) {
-      setMessage("Lista cheia, sorry! Me chama no whats");
-      setError(true);
-      return;
-    }
+    try {
+      const currentDate = new Date();
+      const dueDate = new Date('September 30, 2023 00:00:00');
 
-    if (currentDate < dueDate) {
-      // add guest
-      // if (guest && guest.length > 2) {
-      //   await fetch(guestAPI, {
-      //     method: "POST",
-      //     body: JSON.stringify({ name: guest.toLowerCase() })
-      //   })
-      //     .then((res) => res.json())
-      //     .then((response) => {
-      //       if (response) {
-      //         setErrorMsg("Adicionado, bora pra praia!");
-      //         setError(true);
-      //         setTimeout(() => {
-      //           router.push("/birthday-2023/detalhes");
-      //         }, 2000);
-      //       }
-      //     })
-      //     .catch((error) => {
-      //       setErrorMsg("Falha ao entrar na lista de convidados");
-      //       setError(true);
-      //       console.log(error);
-      //     })
-      // }
-    } else {
-      setMessage("Acabou o prazo my friendy! Me chama no whats.");
+      if (currentDate < dueDate) {
+
+        if (guests.length >= 14) {
+          setMessage("Lista cheia, sorry! Me chama no whats");
+          setError(true);
+          return;
+        }
+
+        if (guest && guest.trim() !== "") {
+
+          const exists = guests.find((g) => g.name === guest.toLowerCase());
+          if (exists) {
+            setMessage("Nome / apelido já adicionado! Tente outro");
+            setError(true);
+            return;
+          }
+
+          const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: guest.toLowerCase() })
+          };
+
+          const response = await fetch(`${apiURL}/guests`, requestOptions);
+          const addGuest = await response.json();
+          if (addGuest) router.push({
+            pathname: "/birthday-2023/detalhes/",
+            query: {
+              id: addGuest.id
+            }
+          }, "/birthday-2023/detalhes");
+        }
+
+      } else {
+        setMessage("Acabou o prazo my friendy! Me chama no whats.");
+        setError(true);
+      }
+    } catch (error) {
+      console.error(error);
+      setMessage("Ocorreu um erro, tente novamente.");
       setError(true);
     }
   }
 
   const handleSubmitEnter = (event: any) => (event.keyCode === 13) && handleSubmit();
+
+  useEffect(() => {
+    error && setTimeout(() => setError(false), 5000)
+  }, [error])
 
   return (
     <GlobalLayout>
@@ -141,22 +138,10 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
                 </div>
 
                 <div className='w-full lg:w-1/2 lg:pl-6 flex flex-col gap-8 text-center max-2xl:mx-auto mb-6'>
-                  <img src="/birthday/rip-20s.gif" alt="RIP 20's" className='w-full mx-auto' />
-                  <div>
-                    <p>Contagem regressiva para o even<span className='font-bold text-purple'>ton</span></p>
-                    <p className='font-semibold'>20 à 22 de Outubro de 2023</p>
-                    <Timeout />
-                  </div>
-                  <div>
-                    <h2 className='font-bold my-4'>Prazos máximos</h2>
-                    <div>
-                      <p>Confirmar sua presença ilustre: <span className='font-semibold'>29/09/2023</span></p>
-                      <p>Transferir divisão dos custos: <span className='font-semibold'>06/10/2023</span></p>
-                    </div>
-                  </div>
+                  <SectionDueDate />
                   <div className='w-full max-w-[400px] text-left mx-auto'>
                     <label htmlFor='guest' className='text-white text-2xl font-bold'>
-                      Apelido ou Nome:
+                      Nome ou apelido:
                     </label>
                     <div className='relative w-full mt-4'>
                       <input
@@ -172,11 +157,11 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
 
                       <button className='w-full text-white bg-dark-purple px-4 py-2 h-10 rounded-lg font-bold mt-6' onClick={handleSubmit}>CONFIRMAR PRESENÇA</button>
 
-                      {error && <div className='absolute -bottom-10 text-white'>
+                      {error && <div className='absolute -bottom-16 text-purple '>
                         {message}
                       </div>}
                     </div>
-                    <div className='mt-4 text-center text-base'>
+                    <div className='mt-20 text-center text-base'>
                       Se a lista atingir 12 pessoas ou chegar a data final de 29/09 não será mais possível confirmar presença
                     </div>
                   </div>
@@ -192,3 +177,21 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
 }
 
 export default BirthdayConfirm;
+
+export async function getStaticProps() {
+  const apiURL = process.env.BIRTHDAY_API;
+
+  const requestOptions = {
+    method: 'GET',
+  };
+
+  const response = await fetch(`${apiURL}/guests`, requestOptions);
+  const guests = await response.json();
+
+  return {
+    props: {
+      apiURL,
+      guests,
+    }
+  }
+}
