@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GlobalLayout from '../../layout/GlobalLayout';
 import BirthHeader from '../../components/birth/header/Header';
 import { GetServerSideProps } from 'next';
@@ -6,7 +6,45 @@ import SectionDueDate from '../../components/birth/sections/SectionDueDate';
 import ItemList from '../../components/birth/ItemList/ItemList';
 import CardActions from '../../components/birth/cards/CardActions';
 
-const BirthdayDetails: React.FC = () => {
+type BirthdayDetailsProps = {
+  guests: any[];
+  spotifyLink: string;
+  wttLink: string;
+  formLink: string;
+  instaLink: string;
+}
+
+const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
+  guests,
+  spotifyLink,
+  wttLink,
+  formLink,
+  instaLink,
+}) => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalLink, setModalLink] = useState("");
+
+  const handleOpenModal = (type: any) => {
+
+    // const actionData = {
+    //   whats: {
+
+    //   },
+    //   insta: {
+
+    //   },
+    //   playlist:{
+
+    //   },
+    //   regras: {
+    //     component: <div></div>,
+    //     link:
+    //   }
+    // }
+
+    console.log(type);
+  }
+
   return (
     <GlobalLayout>
       <div className='w-full min-h-screen px-6 bg-black pb-4'>
@@ -46,35 +84,35 @@ const BirthdayDetails: React.FC = () => {
             </div>
           </ul>
           <ul className='flex flex-wrap justify-around items-center mt-20 mb-10 gap-6'>
-
             <CardActions
               img=''
               label='Entrar no grupo do Whats'
+              onClick={() => handleOpenModal("whats")}
             />
-
             <CardActions
               img=''
               label='Instagram para momentos'
+              onClick={() => handleOpenModal("insta")}
             />
-
             <CardActions
               img=''
               label='Playlist Compartilhada'
+              onClick={() => handleOpenModal("playlist")}
             />
-
             <CardActions
               img=''
               label='Form dos comes e bebes'
+              onClick={() => handleOpenModal("form")}
             />
-
             <CardActions
               img=''
               label='Regras da casa'
+              onClick={() => handleOpenModal("regras")}
             />
-
             <CardActions
               img=''
               label='Lista confirmada'
+              onClick={() => handleOpenModal("lista")}
             />
           </ul>
         </section>
@@ -106,9 +144,18 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const response = await fetch(`${apiURL}/guests`, requestOptions);
   const guests = await response.json();
 
+  const spotifyLink = process.env.SPOTIFY_PLAYLIST;
+  const wttLink = process.env.WHATSAPP_GROUP;
+  const formLink = process.env.FORM_FOOD;
+  const instaLink = process.env.INSTAGRAM_ACCOUNT;
+
   return {
     props: {
       guests,
+      spotifyLink,
+      wttLink,
+      formLink,
+      instaLink,
     }
   }
 }
