@@ -111,9 +111,9 @@ const BirthdayConfirm: React.FC<{ guests: any[], guestAPI: string }> = ({ guests
                   <div className='flex justify-around items-center gap-4 my-10'>
                     <p className='font-semibold'>Exemplos de parcelas</p>
                     <ul className='font-extrabold text-purple'>
-                      <li>4x R$ 125</li>
-                      <li>3x R$ 167</li>
                       <li>2x R$ 250</li>
+                      <li>3x R$ 167</li>
+                      <li>4x R$ 125</li>
                       <li className='text-center'>...</li>
                     </ul>
                   </div>

@@ -53,8 +53,8 @@ const Timeout: React.FC = () => {
       <Counter label='Meses' value={timeLeft.months} showBorderR />
       <Counter label={`Dia${timeLeft.days > 1 && "s"}`} value={timeLeft.days} showBorderR />
       <Counter label='Horas' value={timeLeft.hours} showBorderR />
-      <Counter label='Min' value={timeLeft.minutes} showBorderR />
-      <Counter label='Sec' value={timeLeft.seconds}  />
+      <Counter label='Minutos' value={timeLeft.minutes} showBorderR />
+      <Counter label='Segundos' value={timeLeft.seconds}  />
     </div>
   )
 }
