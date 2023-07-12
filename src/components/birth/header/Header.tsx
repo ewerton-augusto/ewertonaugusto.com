@@ -14,7 +14,7 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({ showLoginLink, className, gue
   const router = useRouter();
 
   const handleSumitGuest = () => {
-    const guestExists = guests.find((guest) => guest.name === guestLogin);
+    const guestExists = guests.find((guest) => guest.name.toLowerCase() === guestLogin.toLowerCase());
 
     if (!guestExists) {
       alert("Não localizado!");
@@ -30,7 +30,7 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({ showLoginLink, className, gue
 
   return (
     <>
-      <header className={`w-full fixed top-0 left-0 p-6 flex items-center justify-between gap-4 ${className}`}>
+      <header className={`w-full fixed top-0 left-0 p-6 flex flex-wrap items-center justify-between gap-4 ${className}`}>
         <div className='flex gap-3 justify-start items-center'>
           <i className='icon-cake-candles-solid text-purple text-4xl'></i>
           <h1 className='text-[40px] font-bold text-white'>30Ton</h1>

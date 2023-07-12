@@ -91,7 +91,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
           ) : (
             <>
               <BirthHeader showLoginLink className='bg-black' guests={guests} />
-              <section className='flex justify-between items-start flex-wrap text-white text-xl pt-[150px]'>
+              <section className='flex justify-between items-start flex-wrap text-white text-xl pt-[150px] max-[500px]:pt-[230px]'>
                 <div className='w-full lg:w-1/2 max-2xl:mx-auto'>
                   <div className='w-full flex flex-col gap-4 justify-start items-start'>
                     <p>Hello my friend, espero que esteja bem! Difícil a charada? hehe</p>
@@ -123,7 +123,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
                       Podem parcelar em quantas vezes forem necessárias até completar o valor total.
                     </p>
                   </div>
-                  <div className='flex justify-around items-center gap-4 my-10'>
+                  <div className='flex justify-around items-center gap-2 my-10'>
                     <p className='font-semibold'>Exemplos de parcelas</p>
                     <ul className='font-extrabold text-purple'>
                       <li>2x R$ 250</li>

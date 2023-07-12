@@ -91,7 +91,7 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
       </Modal>
       <div className='w-full min-h-screen px-6 bg-black pb-4'>
         <BirthHeader className='bg-black z-30' />
-        <section className='text-white text-xl pt-[110px] max-sm:flex max-sm:flex-col-reverse'>
+        <section className='text-white text-xl pt-[60px] sm:pt-[120px] max-sm:flex max-sm:flex-col-reverse'>
           <div className='flex gap-6 items-center justify-around flex-wrap max-lg:justify-center text-center'>
             <SectionDueDate />
           </div>
