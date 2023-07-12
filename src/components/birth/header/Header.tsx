@@ -19,25 +19,31 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({
   const router = useRouter();
 
   const handleSumitGuest = async () => {
-    setIsSending(true);
-    const guestExists = guests.find(
-      (guest) => guest.name.toLowerCase() === guestLogin.toLowerCase()
-    );
+    try {
+      setIsSending(true);
+      const guestExists = guests.find(
+        (guest) => guest.name.toLowerCase() === guestLogin.toLowerCase()
+      );
+  
+      if (!guestExists) {
+        alert("Não localizado!");
+        return;
+      }
 
-    if (!guestExists) {
-      alert("Não localizado!");
-      return;
-    }
-    await router.push(
-      {
-        pathname: "/birthday-2023/detalhes/",
-        query: {
-          id: guestExists.id,
+      await router.push(
+        {
+          pathname: "/birthday-2023/detalhes/",
+          query: {
+            id: guestExists.id,
+          },
         },
-      },
-      "/birthday-2023/detalhes"
-    );
-    setIsSending(false);
+        "/birthday-2023/detalhes"
+      );
+    } catch(error) {
+      console.error(error)
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
