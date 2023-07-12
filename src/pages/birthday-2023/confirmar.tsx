@@ -94,13 +94,13 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
               <section className='flex justify-between items-start flex-wrap text-white text-xl pt-[150px]'>
                 <div className='w-full lg:w-1/2 max-2xl:mx-auto'>
                   <div className='w-full flex flex-col gap-4 justify-start items-start'>
-                    <p>Hello my friend, espero que esteja bem!</p>
-                    <p>Esse ano completo os tão famosos <span className='text-purple'>30 anos</span> e quero muito a sua presença na comemoração!</p>
-                    <p>Para quem já foi nas anteriores, vou seguir com o mesmo plano, aluguei um casa legal,
-                      e vou fazer as compras dos comes & bebes, e pagar parte do aluguel com o dinheiro arrecadado.
+                    <p>Hello my friend, espero que esteja bem! Difícil a charada? hehe</p>
+                    <p>Esse ano completo os tão famosos <span className='text-purple font-extrabold'>30 anos</span> e quero muito a sua presença na comemoração!</p>
+                    <p>Para quem já foi nas anteriores, vou seguir com o mesmo plano, aluguei uma casa legal,
+                      vou fazer as compras dos comes & bebes, e pagar parte do aluguel com o dinheiro arrecadado.
                     </p>
                     <p>
-                      Torcendo para que saia um sol!
+                      Estou torcendo para que saia um sol, pois vai rolar uma praia! k3
                     </p>
                   </div>
                   <h2 className='text-center text-2xl font-bold mt-10 mb-14'>Informações principais</h2>
@@ -120,7 +120,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
                       final de <strong className='text-purple'>06 de Out</strong>.
                     </p>
                     <p>
-                      Podem parcelar em quantas vezes for necessário até completar o valor total.
+                      Podem parcelar em quantas vezes forem necessárias até completar o valor total.
                     </p>
                   </div>
                   <div className='flex justify-around items-center gap-4 my-10'>
@@ -133,14 +133,13 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
                     </ul>
                   </div>
                   <div className='text-center mb-10'>
-                    <p>Essa será última que vou realizar devido minha futura trip, espero você lá! s2</p>
+                    <p>Essa será última que vou realizar devido minha futura trip, espero você lá! de coração s2</p>
                   </div>
                 </div>
 
                 <div className='w-full lg:w-1/2 lg:pl-6 flex flex-col gap-8 text-center max-2xl:mx-auto mb-6'>
                   <SectionDueDate />
-                  <div className='w-full max-w-[400px] text-left mx-auto'>
-                    <p>Esse nome / apelido vai ser usuado para acessar as infos após confirmação!</p>
+                  <div className='w-full max-w-[400px] text-left mx-auto'>                    
                     <label htmlFor='guest' className='text-white text-2xl font-bold'>
                       Nome ou apelido:
                     </label>
@@ -153,16 +152,18 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
                         onChange={(e) => setGuest(e.target.value)}
                         onKeyUp={handleSubmitEnter}
                         value={guest}
-                        placeholder='Informe seu apelido ou nome'
+                        placeholder='Informe seu nome ou apelido'
                       />
                       <button className='w-full text-white bg-dark-purple px-4 py-2 h-10 rounded-lg font-bold mt-6' onClick={handleSubmit}>CONFIRMAR PRESENÇA</button>
                       {error && <div className='absolute -bottom-16 text-purple '>
                         {message}
                       </div>}
                     </div>
-                    <div className='mt-20 text-center text-base'>
-                      Se a lista atingir 12 pessoas ou chegar a data final de 29/09 não será mais possível confirmar presença
+                    
+                    <div className='mt-20 text-center '>
+                      Se a lista atingir 12 pessoas ou chegar a data final de 29/09 não será mais possível confirmar a sua presença #pokas
                     </div>
+                    <p className='text-base mt-4 text-center'>Esse nome / apelido vai ser usuado para acessar as informações após confirmação!</p>
                   </div>
                 </div>
               </section>

@@ -48,9 +48,9 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
         children: <Spotify />,
       },
       form: {
-        title: "Spotify - Playlist Compartilhada",
-        link: spotifyLink,
-        children: <Spotify />,
+        title: "Forms Comes & Bebes",
+        link: formLink,
+        children: <FoodForms />,
       },
       regras: {
         title: "Regras da Casa",
@@ -62,6 +62,12 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
         title: "Pessoas confirmadas!",
         link: '',
         children: <GuestsList guests={guests} />,
+        hideButton: true,
+      },
+      pix: {
+        title: "Informações de pagamento",
+        link: '',
+        children: <Pix />,
         hideButton: true,
       },
     }
@@ -101,7 +107,7 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
               />
               <ItemList
                 icon='icon-stopwatch-20-solid'
-                label='Estimado 3h de viagem - Vamos divigir entre os carros para caronas'
+                label='Estimado +/-3h de viagem - Vamos divigir as pessoas entre os carros para caronas'
               />
             </div>
             <div className='flex flex-col gap-3'>
@@ -111,11 +117,11 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
               />
               <ItemList
                 icon='icon-users-solid'
-                label='12 convidados'
+                label='12 convidados - Mandar seu e-mail no Whats (privado)'
               />
               <ItemList
                 icon='icon-hand-holding-dollar-solid'
-                label='R$ 500'
+                label='R$ 500 (Podendo parcelar) - Pix 11990161687'
               />
             </div>
           </ul>
@@ -128,7 +134,7 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
             <CardActions
               img='/birthday/insta.jpg'
               label='Instagram para momentos'
-              onClick={() => ""} // handleOpenModal("insta")}
+              onClick={() => handleOpenModal("insta")}
             />
             <CardActions
               img='/birthday/playlist.jpg'
@@ -138,7 +144,7 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
             <CardActions
               img='/birthday/food.jpg'
               label='Form dos comes e bebes'
-              onClick={() => ""} // handleOpenModal("form")}
+              onClick={() => handleOpenModal("form")}
             />
             <CardActions
               img='/birthday/rules.jpg'
@@ -149,6 +155,11 @@ const BirthdayDetails: React.FC<BirthdayDetailsProps> = ({
               img='/birthday/guests.jpg'
               label='Lista confirmada'
               onClick={() => handleOpenModal("lista")}
+            />
+            <CardActions
+              img='/birthday/money.jpg'
+              label='Informações para PIX'
+              onClick={() => handleOpenModal("pix")}
             />
           </ul>
         </section>
@@ -165,59 +176,75 @@ const WhatsModal: React.FC = () => (
     <p>Hey, esse é o link do grupo do Whats, como já confirmou presença só acessar o grupo.</p>
     <p>O grupo vai ficar fechado até 2 semanas antes do role, após vai ser aberto para envio de mensagens, memes, fofocas!</p>
     <p>Caso queira, pode entrar mais próximo da viagem! s2 Let's que bora.</p>
-    <p className='font-bold'>Por favor, quando entrar no grupo manda seu e-mail!</p>
+    <p className='font-bold'>Por favor, também mande seu e-mail no Whats (privado)!</p>
   </div>
 )
 
 const Insta: React.FC = () => (
   <div className='flex flex-col gap-4 py-4'>
-    <p>Bora bailar?!</p>
-    <img src="/birthday/playlist.gif" alt="dancing" className='w-full object-cover' />
-    <p>Aqui vai a playlist que tocará no role.</p>
-    <p>Não deixei de colocar aquele som que tu gosta!</p>
+    <p>Insta Compartilhado???</p>
+    <img src="/birthday/insta.gif" alt="insta" className='w-full object-cover h-[170px]' />
+    <p>A ideia é de todos participarem em uma experiência diferente para registrarmos a comemoração...</p>
+    <span className='text-purple font-semibold'></span>
+    <ol>
+      <li>
+        - Logar no insta do <span className='text-purple font-semibold'>@the30ton</span> (A senha vai estar no grupo do whats)
+      </li>
+      <li>
+        - Seguir @the30ton, e após aceitar a sua conta (pra poder ver as fotos depois)
+      </li>
+      <li>
+        - Crie um story highlight com seu nick
+      </li>
+      <li>
+        - Postar o 1o highlight como self-video falando das expectativas do role, e não mostrar pra ninguém. Pode assistir o dos outros!
+      </li>
+      <li>
+        - No dia da comemoração cada pessoa vai postar fotos no feed (geral) e videos no seu próprio highlight conforme sua perspectiva
+      </li>
+    </ol>
+    <p>
+      A ideia é ter registrado o role sobre os olhos de todos que estão participando! Aaahh, e não torne esse perfil público, será algo nosso.
+    </p>
   </div>
 )
 
 const Spotify: React.FC = () => (
   <div className='flex flex-col gap-4 py-4'>
     <p>Bora bailar?!</p>
-    <img src="/birthday/playlist.gif" alt="dancing" className='w-full object-cover' />
+    <img src="/birthday/playlist.gif" alt="playlist" className='w-full object-cover' />
     <p>Aqui vai a playlist que tocará no role.</p>
     <p>Não deixei de colocar aquele som que tu gosta!</p>
   </div>
 )
 
+const FoodForms: React.FC = () => (
+  <div className='flex flex-col gap-4 py-4'>
+    <p>Hello again...</p>
+    <img src="/birthday/food.gif" alt="food" className='w-full object-cover' />
+    <p>Bom a ideia desse form é votar em suas preferências de comidas e bebidas. Também informar caso tenha alguma alergia! Quero ninguém passando mal :)</p>
+    <p>Informe caso não coma carne, ao algo que afete sua saúde, ...</p>
+  </div>
+)
+
 const Regras: React.FC = () => (
   <div className='flex flex-col gap-4 py-4'>
-    <img src="/birthday/rules.gif" alt="dancing" className='w-full object-cover' />
+    <img src="/birthday/rules.gif" alt="rules" className='w-full object-cover' />
     <p className='font-extrabold'>Fique atento as regras da casa! Quem descumprir, vai assumir a multa :D</p>
     <div className='overflow-y-auto'>
       <p>Orientações sobre o uso do imóvel:*</p>
-
       <p>✓ Não entrar molhado e Remova o excesso de areia ao entrar no imóvel;</p>
-
       <p>✓ Favor não sentar se, Roupas molhadas ou úmidas nos assentos, cadeiras, poltronas, sofá e camas (Tecidos).</p>
-
       <p>✓ Deve se respeitar os vizinhos e os horários em relação a *festa e música* alta, dentro do limite (Decibéis) das 9h  até 20h | Após será permitido apenas som ambiente.</p>
-
       <p>Caso quebre algum objetos, copos, taças, ou danifique algo na casa, avise-nos imediatamente para que possamos aplicar a cobrança devida para substituição.</p>
-
       <p>*É proibido fumar dentro da casa, nos decks, Área Gourmet e área coberta.*</p>
-
       <p>Proibido jogar lixos nos decks da piscina, cozinha e quartos;</p>
-
       <p>Proibido descartar papel higiênico nos vasos sanitários.</p>
-
       <p>*Uso da Piscina*</p>
-
       <p>✓ Proibido entrar na piscina com uso de Protetores solar, *Bronzeadores* e Areia de Praia.</p>
-
       <p>*Favor passar na ducha.*</p>
-
       <p>*Uso da SPA*</p>
-
       <p>Após as 22h Favor não acionar a Bomba da Hidromassagem.</p>
-
       <p>* Após as 22:00 é PROIBIDO som alto e conversas em tom muito alto, pois estamos em um lugar familiar e que preza pelos bons costumes, além das rigorosas leis municipais em relação a perturbação do sossego.</p>
     </div>
   </div>
@@ -231,6 +258,18 @@ const GuestsList: React.FC<{ guests: any[] }> = ({ guests }) => (
       {guests?.map((guest) => (
         <li> - {guest.name} - </li>
       ))}
+    </ul>
+  </div>
+)
+
+const Pix: React.FC = () => (
+  <div className='flex flex-col gap-4 py-4'>
+    <img src="/birthday/money.gif" alt="payment" className='w-full object-cover' />
+    <p className='font-extrabold'>Segue os dados para pagamentos!</p>
+    <ul>
+      <li>Pix: 11990161687</li>
+      <li>Valor total: R$ 500</li>
+      <li>Pagar até: 06/10/2023</li>
     </ul>
   </div>
 )

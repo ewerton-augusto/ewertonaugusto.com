@@ -21,9 +21,9 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
       setTimeout(() => setError(false), 5000)
     }
   }
-  
+
   const handleSubmitEnter = (event) => (event.keyCode === 13) && handleSubmit();
-  
+
   useEffect(() => {
     localStorage.removeItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZ);
     inputRef.current.focus();
@@ -38,7 +38,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
         <section className='flex items-center justify-center h-full w-full'>
           <div className='w-full max-w-3xl'>
             <label htmlFor='answer' className='text-white max-sm:text-3xl text-5xl font-bold'>
-              <span className='text-purple'>Quem </span>nunca para de <span className='text-purple'> crescer </span>?
+              <span className='text-purple'>Quem </span>nunca para de <span className='text-purple'> crescer</span>, e termina com <span className='text-purple'>N</span> e não com <span className='text-purple'>M</span>?
             </label>
             <div className='relative w-full mt-4'>
               <input
