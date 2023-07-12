@@ -49,7 +49,7 @@ const Timeout: React.FC = () => {
   }, []);
 
   return (
-    <div className='flex justify-center items-center gap-4'>
+    <div className='flex justify-center items-center max-sm:gap-1 gap-4'>
       <Counter label='Meses' value={timeLeft.months} showBorderR />
       <Counter label={`Dia${timeLeft.days > 1 && "s"}`} value={timeLeft.days} showBorderR />
       <Counter label='Horas' value={timeLeft.hours} showBorderR />

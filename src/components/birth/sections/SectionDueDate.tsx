@@ -9,7 +9,7 @@ const SectionDueDate: React.FC = () => {
       </div>
       <div>
         <p>Contagem regressiva para o even<span className='font-bold text-purple'>ton</span></p>
-        <p className='font-semibold'>20 à 22 de Outubro de 2023</p>
+        <p className='font-semibold mb-6'>20 à 22 de Outubro de 2023</p>
         <Timeout />
       </div>
       <div>
