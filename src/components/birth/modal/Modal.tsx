@@ -19,13 +19,13 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   return (
     isOpen && (
-      <div className='fixed top-0 left-0 w-screen h-screen z-40 bg-dark-purple bg-opacity-90 flex justify-center items-center px-4'>
-        <div className='w-full max-w-[520px] rounded shadow bg-white p-4 m-4'>
+      <div className='fixed top-0 left-0 w-screen h-screen z-40 bg-dark-purple bg-opacity-90 flex justify-center items-center p-4' id='modal'>
+        <div className='w-full max-w-[520px] h-auto max-h-[600px] rounded shadow bg-white p-4 m-4'>
           <div className='flex justify-between items-center'>
             <h1 className='text-black text-xl font-bold capitalize'>{title}</h1>
             <button onClick={onClose} className='w-10 h-10 rounded-full border-2 border-dark-purple hover:text-white hover:bg-dark-purple'>X</button>
           </div>
-          <div className='my-2 max-h-[700px] overflow-y-auto'>
+          <div className='my-2'>
             {children}
           </div>
           {

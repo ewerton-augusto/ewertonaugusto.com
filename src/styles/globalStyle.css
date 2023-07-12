@@ -13,3 +13,7 @@
 body {
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
+
+body:has(#modal) {
+  overflow: hidden;
+}
