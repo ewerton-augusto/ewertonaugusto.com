@@ -11,7 +11,7 @@ const BirthdayHome: React.FC<{ password: string }> = ({ password }) => {
   const inputRef = useRef(null);
 
   const handleSubmit = () => {
-    if (answer.toLocaleLowerCase() === password) {
+    if (answer.toLocaleLowerCase().trim() === password) {
       localStorage.setItem(LocalStorageEnum.EAS_BIRTHDAY_2023_QUIZ, "passed");
       router.push("/birthday-2023/confirmar");
     } else {
