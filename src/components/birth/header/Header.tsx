@@ -14,10 +14,12 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({
   guests,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [guestLogin, setGuestLogin] = useState("");
   const router = useRouter();
 
-  const handleSumitGuest = () => {
+  const handleSumitGuest = async () => {
+    setIsSending(true);
     const guestExists = guests.find(
       (guest) => guest.name.toLowerCase() === guestLogin.toLowerCase()
     );
@@ -26,7 +28,7 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({
       alert("Não localizado!");
       return;
     }
-    router.push(
+    await router.push(
       {
         pathname: "/birthday-2023/detalhes/",
         query: {
@@ -35,6 +37,7 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({
       },
       "/birthday-2023/detalhes"
     );
+    setIsSending(false);
   };
 
   return (
@@ -81,6 +84,7 @@ const BirthHeader: React.FC<BirthHeaderProps> = ({
         <button
           onClick={handleSumitGuest}
           className="w-full bg-dark-purple rounded-xl border-2 border-purple px-4 py-2 text-white text-center font-semibold hover:opacity-90"
+          disabled={isSending}
         >
           Acessar dashboad
         </button>
