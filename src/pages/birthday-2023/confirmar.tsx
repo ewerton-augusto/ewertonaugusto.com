@@ -90,7 +90,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
             </>
           ) : (
             <>
-              <BirthHeader showLoginLink className='bg-black' />
+              <BirthHeader showLoginLink className='bg-black' guests={guests} />
               <section className='flex justify-between items-start flex-wrap text-white text-xl pt-[150px]'>
                 <div className='w-full lg:w-1/2 max-2xl:mx-auto'>
                   <div className='w-full flex flex-col gap-4 justify-start items-start'>
@@ -140,6 +140,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
                 <div className='w-full lg:w-1/2 lg:pl-6 flex flex-col gap-8 text-center max-2xl:mx-auto mb-6'>
                   <SectionDueDate />
                   <div className='w-full max-w-[400px] text-left mx-auto'>
+                    <p>Esse nome / apelido vai ser usuado para acessar as infos após confirmação!</p>
                     <label htmlFor='guest' className='text-white text-2xl font-bold'>
                       Nome ou apelido:
                     </label>
@@ -154,9 +155,7 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
                         value={guest}
                         placeholder='Informe seu apelido ou nome'
                       />
-
                       <button className='w-full text-white bg-dark-purple px-4 py-2 h-10 rounded-lg font-bold mt-6' onClick={handleSubmit}>CONFIRMAR PRESENÇA</button>
-
                       {error && <div className='absolute -bottom-16 text-purple '>
                         {message}
                       </div>}
@@ -170,7 +169,6 @@ const BirthdayConfirm: React.FC<{ guests: any[], apiURL: string }> = ({ guests, 
             </>
           )
         }
-
       </div>
     </GlobalLayout>
   );
