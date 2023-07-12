@@ -214,7 +214,7 @@ const BirthdayConfirm: React.FC<{ guests: any[]; apiURL: string }> = ({
                       onClick={handleSubmit}
                       disabled={isSending}
                     >
-                      CONFIRMAR PRESENÇA
+                      {isSending ? "AGUARDE..." : "CONFIRMAR PRESENÇA"}
                     </button>
                     {error && (
                       <div className="absolute -bottom-16 text-purple ">
