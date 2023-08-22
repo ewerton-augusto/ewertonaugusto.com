@@ -176,7 +176,7 @@ const WhatsModal: React.FC = () => (
       alt="dancing"
       className="w-full h-52 object-cover"
     />
-    <div className="h-full max-h-[265px] overflow-y-auto flex flex-col gap-4">
+    <div className="h-full max-h-[170px] overflow-y-auto flex flex-col gap-4">
       <p>
         Hey, esse é o link do grupo do Whats, como já confirmou presença só
         acessar o grupo.
