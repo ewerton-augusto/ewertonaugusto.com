@@ -1,32 +1,72 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Section from '../Section';
 import Title from '../Title';
 import SubTitle from '../SubTitle';
+import { motion, useInView, useAnimation } from "framer-motion";
 
 export const SectionAwards: React.FC = () => {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) mainControls.start("visible");
+  }, [isInView]);
+
   return (
     <Section className='flex items-center justify-center'>
       <div className='w-full'>
         <Title>CI&T Awards</Title>
         <img src="/pdp/awards.png" alt="awards" className='w-full max-w-[180px] mx-auto mb-6' />
         <SubTitle className='text-center mb-12'>PDP Outubro 2023</SubTitle>
-        <div className='flex justify-around items-center gap-6 flex-wrap'>
-          {awards.map((award) => (
-            <div key={award.title} title={award.content} className='hover:scale-105 w-full max-w-[250px] flex flex-col gap-2 justify-center items-center p-4 rounded-xl border-[1px] border-red border-opacity-40 shadow-xl'>
-              <img src={award.img} alt={award.title} className='w-10 h-10 mb-4 shadow-xl rounded-full' />
-              <div className='text-red text-opacity-70 font-bold'>{award.title}</div>
-              <div className='text-base'>{award.date}</div>
-            </div>
+        <div ref={ref} className='flex justify-around items-center gap-6 flex-wrap'>
+          {awards.map((award, index) => (
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                duration: 0.6, delay: Number(`0.4${index + 2}`)
+              }}
+              key={award.content}
+              className='w-full max-w-[250px]'>
+              <div
+                title={award.content}
+                className='hover:scale-105 w-full flex flex-col gap-2 justify-center items-center p-4 rounded-xl border-[1px] border-red border-opacity-40 shadow-xl'>
+                <img src={award.img} alt={award.title} className='w-10 h-10 mb-4 shadow-xl rounded-full' />
+                <div className='text-red text-opacity-70 font-bold'>{award.title}</div>
+                <div className='text-base'>{award.date}</div>
+              </div>
+            </motion.div>
           ))}
         </div>
         <SubTitle className='text-center my-12'>PDP Julho 2022 [Anterior]</SubTitle>
         <div className='flex justify-around items-center gap-6 flex-wrap'>
-          {awardsOld.map((award) => (
-            <div key={award.title} title={award.content} className='hover:scale-105 w-full max-w-[250px] flex flex-col gap-2 justify-center items-center p-4 rounded-xl border-[1px] border-red border-opacity-40 shadow-xl'>
-              <img src={award.img} alt={award.title} className='w-10 h-10 mb-4 shadow-xl rounded-full' />
-              <div className='text-red text-opacity-70 font-bold'>{award.title}</div>
-              <div className='text-base'>{award.date}</div>
-            </div>
+          {awardsOld.map((award, index) => (
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 75 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                duration: 0.6, delay: Number(`0.5${index + 2 + awards.length}`)
+              }}
+              key={award.title}
+              className='w-full max-w-[250px]'
+            >
+              <div title={award.content} className='hover:scale-105 w-full flex flex-col gap-2 justify-center items-center p-4 rounded-xl border-[1px] border-red border-opacity-40 shadow-xl'>
+                <img src={award.img} alt={award.title} className='w-10 h-10 mb-4 shadow-xl rounded-full' />
+                <div className='text-red text-opacity-70 font-bold'>{award.title}</div>
+                <div className='text-base'>{award.date}</div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

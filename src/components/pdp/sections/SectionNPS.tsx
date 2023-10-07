@@ -1,8 +1,13 @@
 import React from 'react';
+import dynamic from "next/dynamic";
 import Section from '../Section';
 import Title from '../Title';
 import SubTitle from '../SubTitle';
-import ChartNPS from '../ChartNPS';
+
+const ChartNPS = dynamic(
+  import("../ChartNPS"),
+  { ssr: false }
+);
 
 const TR = ({ children }) => <tr className='border-b-[1px] border-black border-opacity-30'>{children}</tr>
 const TD = ({ children }) => <td className='p-1'>{children}</td>

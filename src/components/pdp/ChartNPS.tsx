@@ -49,7 +49,7 @@ const ChartNPS: React.FC<ChartNPSProps> = ({
   return (
     <div className='w-fit'>
       <div className='text-center font-semibold'>NPS {nps}%</div>
-      <PieChart width={310} height={240} title=''>
+      <PieChart width={310} height={240}>
         <Pie
           dataKey="value"
           startAngle={180}
@@ -63,7 +63,7 @@ const ChartNPS: React.FC<ChartNPSProps> = ({
           stroke="none"
         >
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={entry.color} />
+            <Cell key={`cell-${entry.name}`} fill={entry.color} />
           ))}
         </Pie>
         {needle(value, data, cx, cy, iR, oR, '#101010')}

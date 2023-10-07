@@ -13,17 +13,12 @@ export const SectionFeedback: React.FC = () => {
         <div className='flex items-center justify-center mt-20'>
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={50}
             slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
             loop={true}
-            autoplay={{
-              delay: 5000,
-            }}
+            autoplay
           >
             {depoimentos.map((depoimento, index) => (
-              <SwiperSlide key={depoimento.quote} virtualIndex={index}>
+              <SwiperSlide key={depoimento.quote} virtualIndex={index} className='cursor-pointer'>
                 <Depoiment
                   quote={depoimento.quote}
                   author={depoimento.author}
