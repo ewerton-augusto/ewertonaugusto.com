@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../Title';
 import SubTitle from '../SubTitle';
 
-const SectionOutsideWork: React.FC = () => {
+export const SectionOutsideWork: React.FC = () => {
   {/* 
           mostrar que sigo me capacitando, eventos, palestras, treinamentos
             - KZ Website
@@ -31,5 +31,3 @@ const SectionOutsideWork: React.FC = () => {
     </section>
   )
 }
-
-export default SectionOutsideWork;

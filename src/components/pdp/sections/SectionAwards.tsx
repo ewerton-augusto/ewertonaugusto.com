@@ -3,7 +3,7 @@ import Section from '../Section';
 import Title from '../Title';
 import SubTitle from '../SubTitle';
 
-const SectionAwards: React.FC = () => {
+export const SectionAwards: React.FC = () => {
   return (
     <Section className='flex items-center justify-center'>
       <div className='w-full'>
@@ -33,8 +33,6 @@ const SectionAwards: React.FC = () => {
     </Section>
   )
 }
-
-export default SectionAwards;
 
 const awards = [
   {

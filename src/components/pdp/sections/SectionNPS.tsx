@@ -7,7 +7,7 @@ import ChartNPS from '../ChartNPS';
 const TR = ({ children }) => <tr className='border-b-[1px] border-black border-opacity-30'>{children}</tr>
 const TD = ({ children }) => <td className='p-1'>{children}</td>
 
-const SectionNPS: React.FC = () => {
+export const SectionNPS: React.FC = () => {
   return (
     <Section className='min-h-screen my-20'>
       <Title>Net Promoter Score [NPS]</Title>
@@ -191,5 +191,3 @@ const SectionNPS: React.FC = () => {
     </Section>
   )
 }
-
-export default SectionNPS;

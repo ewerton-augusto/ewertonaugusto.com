@@ -5,7 +5,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-const SectionFeedback: React.FC = () => {
+export const SectionFeedback: React.FC = () => {
   return (
     <section className='w-full max-sm:p-4 p-6 min-h-screen flex items-center justify-center bg-red bg-opacity-70 text-white'>
       <div className='w-full mx-auto max-w-[1440px]'>
@@ -38,8 +38,6 @@ const SectionFeedback: React.FC = () => {
     </section>
   )
 }
-
-export default SectionFeedback;
 
 const depoimentos = [
   {
