@@ -12,9 +12,11 @@ module.exports = {
     colors: {
       primary: "#4C76BD",
       purple: "#BE8BFF",
+      purplelight: "#BE8BFF60",
       "dark-purple": "#3E1D68",
       white: "#FFF",
       black: "#101010",
+      red: "#ed1840",
     },
     extend: {},
   },
