@@ -11,7 +11,7 @@ const CITIcon = () => (
 )
 
 const InitialIcon = () => (
-  <img src='https://img.freepik.com/vetores-premium/icone-do-foguete-da-nave-espacial-do-estilo-dos-desenhos-animados-3d_567896-228.jpg' className='w-full rounded-full' />
+  <img src='https://img.freepik.com/vetores-premium/icone-do-foguete-da-nave-espacial-do-estilo-dos-desenhos-animados-3d_567896-228.jpg' className='rotate-180 w-full rounded-full' />
 )
 
 const Card = ({
@@ -31,18 +31,40 @@ const Timeline: React.FC = () => {
   return (
     <VerticalTimeline lineColor='white'>
 
-      <VerticalTimelineElement date="2023" icon={<CITIcon />}>
-        <Card title="Mid-level Software Developer" subtitle="CI&T">
-          <p>Iniciei o ano de 2023 com um grande desafio que foi a recontrução do MVP da Waves junto a SK e CI&T. Algo significativo pois ajudou a restaurar a confiança do cliente.</p>
-          <p>Atualmente estou atuando em um novo projeto para a Gozio, na construção de uma web app para pacientes navegarem nos campus dos hospitais. Projeto com grandes desafios no front-end, onde sigo construindo um forte relacionamento com o cliente e evoluindo tecnicamente.</p>
+      <VerticalTimelineElement date="2017 - 2020" icon={<R2Icon />}>
+        <Card title="Technical Coordinator" subtitle="R2SIS">
+          <p>
+            Saída de um cenário de suporte técnico para um papel de liderança de pessoas.
+          </p>
+          <p>
+            Período mais desafiador que enfrentei e que gerou grandes resultados como melhor comunicação, colaboração com as pessoas, liderar pelo exemplo, motivar pessoas, e o trabalho em equipe.
+          </p>
+        </Card>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement date="2020 - 2021" icon={<R2Icon />}>
+        <Card title="Full-stack Developer" subtitle="R2SIS">
+          <p>Mudança de papel para Desenvolvedor full-stack web.</p>
+          <p>Comecei a trabalhar colocando a mão em códigos, participando de todo o ciclo do desenvolvimento das soluções web.</p>
+          <p>O time era pequeno e mesmo sem muitos conhecimentos técnicos atuei como responsável do time de desenvolvimento por um período de 1 ano e meio.</p>
+          <div>
+            <p>Clientes:</p>
+            <div className='flex items-center justify-center gap-6 pt-6 flex-wrap'>
+              <img src="/pdp/clients/deca.png" alt="deca" className='w-auto h-8' />
+              <img src="/pdp/clients/semcon.png" alt="semcon" className='w-auto h-8' />
+              <img src="/pdp/clients/afry.jpg" alt="afry" className='w-auto h-8' />
+            </div>
+          </div>
+        </Card>
+      </VerticalTimelineElement>
+
+      <VerticalTimelineElement date="2021" icon={<CITIcon />}>
+        <Card title="Junior Software Developer" subtitle="CI&T">
+          <p>Cheguei para atuar na Verus bem no início do projeto, fase de sprint 0, consegui contribuir bastante nas definições de padrões para o frontend, na organização e documentação da solução. Enfrentei junto ao time diversos desafios quanto a prazos e requisitos de negócio. </p>
           <div>
             <p>Cliente:</p>
             <div className='flex items-center justify-center gap-6 pt-6'>
-              <img
-                src="https://assets.agencyspotter.com/uploads/agency_image/image/27967/resized_SK_logo_Pantone_jpg.jpg"
-                alt="Stable Kernel"
-                className='w-auto h-12'
-              />
+              <img src="/pdp/clients/verus.png" alt="verus" className='w-auto h-20' />
             </div>
           </div>
         </Card>
@@ -71,42 +93,20 @@ const Timeline: React.FC = () => {
         </Card>
       </VerticalTimelineElement>
 
-      <VerticalTimelineElement date="2021" icon={<CITIcon />}>
-        <Card title="Junior Software Developer" subtitle="CI&T">
-          <p>Cheguei para atuar na Verus bem no início do projeto, fase de sprint 0, consegui contribuir bastante nas definições de padrões para o frontend, na organização e documentação da solução. Enfrentei junto ao time diversos desafios quanto a prazos e requisitos de negócio. </p>
+      <VerticalTimelineElement date="2023" icon={<CITIcon />}>
+        <Card title="Mid-level Software Developer" subtitle="CI&T">
+          <p>Iniciei o ano de 2023 com um grande desafio que foi a recontrução do MVP da Waves junto a SK e CI&T. Algo significativo pois ajudou a restaurar a confiança do cliente.</p>
+          <p>Atualmente estou atuando em um novo projeto para a Gozio, na construção de uma web app para pacientes navegarem nos campus dos hospitais. Projeto com grandes desafios no front-end, onde sigo construindo um forte relacionamento com o cliente e evoluindo tecnicamente.</p>
           <div>
             <p>Cliente:</p>
             <div className='flex items-center justify-center gap-6 pt-6'>
-              <img src="/pdp/clients/verus.png" alt="verus" className='w-auto h-20' />
+              <img
+                src="https://assets.agencyspotter.com/uploads/agency_image/image/27967/resized_SK_logo_Pantone_jpg.jpg"
+                alt="Stable Kernel"
+                className='w-auto h-12'
+              />
             </div>
           </div>
-        </Card>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement date="2020 - 2021" icon={<R2Icon />}>
-        <Card title="Full-stack Developer" subtitle="R2SIS">
-          <p>Mudança de papel para Desenvolvedor full-stack web.</p>
-          <p>Comecei a trabalhar colocando a mão em códigos, participando de todo o ciclo do desenvolvimento das soluções web.</p>
-          <p>O time era pequeno e mesmo sem muitos conhecimentos técnicos atuei como responsável do time de desenvolvimento por um período de 1 ano e meio.</p>
-          <div>
-            <p>Clientes:</p>
-            <div className='flex items-center justify-center gap-6 pt-6 flex-wrap'>
-              <img src="/pdp/clients/deca.png" alt="deca" className='w-auto h-8' />
-              <img src="/pdp/clients/semcon.png" alt="semcon" className='w-auto h-8' />
-              <img src="/pdp/clients/afry.jpg" alt="afry" className='w-auto h-8' />
-            </div>
-          </div>
-        </Card>
-      </VerticalTimelineElement>
-
-      <VerticalTimelineElement date="2017 - 2020" icon={<R2Icon />}>
-        <Card title="Technical Coordinator" subtitle="R2SIS">
-          <p>
-            Saída de um cenário de suporte técnico para um papel de liderança de pessoas.
-          </p>
-          <p>
-            Período mais desafiador que enfrentei e que gerou grandes resultados como melhor comunicação, colaboração com as pessoas, liderar pelo exemplo, motivar pessoas, e o trabalho em equipe.
-          </p>
         </Card>
       </VerticalTimelineElement>
 
@@ -115,6 +115,7 @@ const Timeline: React.FC = () => {
         iconStyle={{ background: 'rgb(97, 172, 123)', color: '#fff' }}
         icon={<InitialIcon />}
       />
+
     </VerticalTimeline>
   )
 }
