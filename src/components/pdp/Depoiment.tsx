@@ -17,7 +17,7 @@ const Depoiment: React.FC<DepoimentProps> = ({
       <p className='p-4 text-white text-2xl text-opacity-80 mb-10 text-center'>
         "{quote}"
       </p>
-      <div className='text-3xl text-white text-opacity-90 font-extrabold'>
+      <div className='text-3xl text-white text-opacity-90 font-extrabold text-center'>
         {author}
       </div>
     </div>

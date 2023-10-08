@@ -18,7 +18,11 @@ module.exports = {
       black: "#101010",
       red: "#ed1840",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'home': "url('/pdp/background.jpg')",
+      }
+    },
   },
   plugins: [],
 };
