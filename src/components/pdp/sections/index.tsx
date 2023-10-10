@@ -1,0 +1,10 @@
+export { SectionHome } from "./SectionHome";
+export { SectionMission } from "./SectionMission";
+export { SectionJorney } from "./SectionJorney";
+export { SectionRetro } from "./SectionRetro";
+export { SectionPDI } from "./SectionPDI";
+export { SectionAwards } from "./SectionAwards";
+export { SectionFeedback } from "./SectionFeedback";
+export { SectionNPS } from "./SectionNPS";
+export { SectionOutsideWork } from "./SectionOutsideWork";
+export { SectionQA } from "./SectionQA";
