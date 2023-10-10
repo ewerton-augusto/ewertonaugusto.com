@@ -12,25 +12,25 @@ export const SectionPDI: React.FC = () => {
         <table className='w-full mb-20'>
           <thead>
             <tr className='border-b-[1px] max-lg:hidden'>
+              <TH>Resultados</TH>
               <TH>Meta</TH>
               <TH>Específica</TH>
               <TH>Mensurável</TH>
               <TH>Alcançável</TH>
               <TH>Relevante</TH>
               <TH>Temporal</TH>
-              <TH>Resultados</TH>
             </tr>
           </thead>
           <tbody className='max-lg:flex max-lg:flex-col max-lg:justify-center max-lg:items-center'>
             {oldGoals.map((goal, index) => (
               <tr key={index} className='w-full max-lg:flex max-lg:justify-center max-lg:items-center max-lg:flex-col max-lg:p-4 max-lg:border-2 max-lg:rounded-lg max-lg:my-4'>
+                <TD className='bg-white bg-opacity-10 text-black'>{goal.resultados}</TD>
                 <TD className='font-bold'>{goal.meta}</TD>
                 <TD>{goal.especifica}</TD>
                 <TD>{goal.mensuravel}</TD>
                 <TD>{goal.alcancavel}</TD>
                 <TD>{goal.relevante}</TD>
                 <TD>{goal.temporal}</TD>
-                <TD className='bg-white bg-opacity-10 text-black'>{goal.resultados}</TD>
               </tr>
             ))}
           </tbody>
@@ -112,39 +112,39 @@ const goals = [
 
 const oldGoals = [
   {
+    "resultados": "Os aprendizados em Vue3 e Nuxt foram essencias para entregas nos projetos da College House, e além disso, criei PoCs e atuei em um freelance utilizando o Nuxt. Atualmente tenho desempenhado um ótimo papel utilizando TS, sabendo usar as tipagens corretas, types e interfaces, e além disso extender types necessários. Estou utilizando o TS no meu dia-a-dia atualmente. Por último, nos projetos atuais tenho escrito testes unitários utilizando o Jest e também fazendo a implementação e configuração do mesmo.",
     "meta": "1. Estudos em Vue 3 e Testes",
     "especifica": "Estudar Vue 3, TypeScript e Testes unitários para aplicar em projeto em transição para Vue 3.",
     "mensuravel": "Progresso nos estudos e aplicação prática em projetos.",
     "alcancavel": "Dedicar tempo diariamente aos estudos e projetos pessoais.",
     "relevante": "Contribuir para o sucesso da transição para Vue 3 no projeto atual.",
     "temporal": "3 meses.",
-    "resultados": ""
   },
   {
+    "resultados": "Não tirei a certificação mencionada, mas tenho feito treinamentos na plataforma Alura, e além disso tenho acessos ao ambientes da PSS, onde, redava manualmente a pipeline de deploy em QA, acesso para gerenciar informações de rede, aos bancos de dados e máquinas EC2. Tirar o certificado ainda esta no plano, já que atualmente estou tento contato com o ambiente AWS do cliente",
     "meta": "2. Certificação AWS Certified Cloud Practitioner",
     "especifica": "Aprender e obter a certificação AWS Certified Cloud Practitioner em até 4 meses.",
     "mensuravel": "Obtenção da certificação e aplicação de conhecimentos em projetos AWS.",
     "alcancavel": "Utilizar recursos da ci&t university e centaurus training program para aprendizado.",
     "relevante": "Fortalecer os conhecimentos em AWS para melhorar o projeto atual.",
     "temporal": "4 meses.",
-    "resultados": ""
   },
   {
+    "resultados": "Estou ativamente colaborando nos backlogs e boards dos projetos que tenho atuado, criando tasks, stories, e ajudando também no Acceptance Criteria dos mesmos. Em conjunto fiz treinamentos de Kanban, sabendo montar boards, métricas e outros. O mesmo ajudou na orientação de estágiários na CI&T, no Tomorrow Talents e retros de projetos com a SK.",
     "meta": "3. Certificação de Scrum",
     "especifica": "Aprofundar conhecimentos em Scrum e obter a certificação em até 6 meses.",
     "mensuravel": "Obtenção da certificação Scrum e aplicação efetiva no projeto atual.",
     "alcancavel": "Utilizar recursos do centaurus training para preparação e estudos.",
     "relevante": "Melhorar a colaboração e eficiência no uso do Scrum no projeto.",
     "temporal": "6 meses.",
-    "resultados": ""
   },
   {
+    "resultados": "Tenho compatilhado bastante meus conhecimentos em frontend e softskill com pessoas, como nossa antiga Junior Erika, nossos antigos estágiarios Michel e Gabriel Bill e também com as pessoas do Tomorrow talents. Além de compartilhar, tenho aprendido muito! Nesse momento estou em busca de uma nova pessoa para ajudar em sua jornada!",
     "meta": "4. Atuar como Career Advisor",
     "especifica": "Identificar e formar novos sucessores atuando como um Career Advisor.",
     "mensuravel": "Identificar e orientar pelo menos um novo membro da equipe como sucessor.",
     "alcancavel": "Dedicar tempo para orientar e desenvolver outros membros da equipe.",
     "relevante": "Contribuir para a continuidade do sucesso da equipe.",
     "temporal": "Contínuo.",
-    "resultados": ""
   }
 ];
