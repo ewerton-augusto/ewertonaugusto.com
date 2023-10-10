@@ -9,15 +9,6 @@ export const SectionJorney: React.FC = () => {
       <div className='w-full mx-auto max-w-[1440px] py-20'>
         <Title color='white'>My Jorney</Title>
         <Timeline />
-        <SubTitle>Retro</SubTitle>
-        {/* start doing
-    stop doing
-    do less
-    keep doing
-    do more */}
-        <SubTitle>PDI</SubTitle>
-        {/* mostrar a anterior e oq alcancei
-    mostrar atual e plano smart */}
         <img src="/pdp/goal.png" alt="nps" className='w-full max-w-[250px] mx-auto mt-12' />
       </div>
     </section>
