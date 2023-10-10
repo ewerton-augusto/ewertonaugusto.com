@@ -31,115 +31,12 @@ export const SectionNPS: React.FC = () => {
         </div>
       </div>
       <div>
-        <div className='mt-4'>
-          <SubTitle className='text-center my-12'>PDP Outubro 2023</SubTitle>
-          <div className='flex items-center justify-between gap-4  max-md:flex-wrap max-md:justify-center mb-12'>
-            <div className='rounded-xl border-[1px] border-red border-opacity-40 shadow-xl p-4'>
-              <div className='font-semibold mb-4'>
-                Coletado em Julho/2023
-              </div>
-              <div>
-                <span className='font-semibold'>Convidados:</span> 7
-              </div>
-              <div>
-                <span className='font-semibold'>Respondentes:</span> 6
-              </div>
-            </div>
-            <div>
-              <table className='text-center'>
-                <thead className='border-b-2 border-red'>
-                  <tr>
-                    <th className='p-2'>Perfil dos Respondentes</th>
-                    <th className='p-2'>Qtd</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <TR>
-                    <TD>Director of Technical Engagement</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Principal Architect in Engineering</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Squad Leader</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Master Developer</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Mid-level Developer</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>QE</TD>
-                    <TD>1</TD>
-                  </TR>
-                </tbody>
-              </table>
-            </div>
-            <ChartNPS nps={100} />
-          </div>
-          <div className='flex items-center justify-between gap-4 max-md:flex-wrap max-md:justify-center'>
-            <div className='rounded-xl border-[1px] border-red border-opacity-40 shadow-xl p-4'>
-              <div className='font-semibold mb-4'>
-                Coletado em Jan/2023
-              </div>
-              <div>
-                <span className='font-semibold'>Convidados:</span> 7
-              </div>
-              <div>
-                <span className='font-semibold'>Respondentes:</span> 7
-              </div>
-            </div>
-            <div>
-              <table className='text-center'>
-                <thead className='border-b-2 border-red'>
-                  <tr>
-                    <th className='p-2'>Perfil dos Respondentes</th>
-                    <th className='p-2'>Qtd</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <TR>
-                    <TD>Senior Manager</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Squad Leader</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>BA</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Master Developer</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>Senior Developer</TD>
-                    <TD>1</TD>
-                  </TR>
-                  <TR>
-                    <TD>QE</TD>
-                    <TD>2</TD>
-                  </TR>
-                </tbody>
-              </table>
-            </div>
-            <ChartNPS nps={100} />
-          </div>
-        </div>
-        <div className='mt-4'>
+      <div className='mt-4'>
           <SubTitle className='text-center my-12'>PDP Julho 2022 [Anterior]</SubTitle>
           <div className='flex items-center justify-between gap-4  max-md:flex-wrap max-md:justify-center'>
             <div className='rounded-xl border-[1px] border-red border-opacity-40 shadow-xl p-4'>
               <div className='font-semibold mb-4'>
-                Coletado em Julho/2022
+                Coletado em Jul/2022
               </div>
               <div>
                 <span className='font-semibold'>Convidados:</span> 11
@@ -191,6 +88,111 @@ export const SectionNPS: React.FC = () => {
             <ChartNPS nps={100} />
           </div>
         </div>
+        <div className='mt-4'>
+          <SubTitle className='text-center my-12'>PDP Outubro 2023</SubTitle>
+          <div className='flex items-center justify-between gap-4 max-md:flex-wrap max-md:justify-center mb-12'>
+            <div className='rounded-xl border-[1px] border-red border-opacity-40 shadow-xl p-4'>
+              <div className='font-semibold mb-4'>
+                Coletado em Jan/2023
+              </div>
+              <div>
+                <span className='font-semibold'>Convidados:</span> 7
+              </div>
+              <div>
+                <span className='font-semibold'>Respondentes:</span> 7
+              </div>
+            </div>
+            <div>
+              <table className='text-center'>
+                <thead className='border-b-2 border-red'>
+                  <tr>
+                    <th className='p-2'>Perfil dos Respondentes</th>
+                    <th className='p-2'>Qtd</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <TR>
+                    <TD>Senior Manager</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Squad Leader</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>BA</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Master Developer</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Senior Developer</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>QE</TD>
+                    <TD>2</TD>
+                  </TR>
+                </tbody>
+              </table>
+            </div>
+            <ChartNPS nps={100} />
+          </div>
+          <div className='flex items-center justify-between gap-4  max-md:flex-wrap max-md:justify-center'>
+            <div className='rounded-xl border-[1px] border-red border-opacity-40 shadow-xl p-4'>
+              <div className='font-semibold mb-4'>
+                Coletado em Jul/2023
+              </div>
+              <div>
+                <span className='font-semibold'>Convidados:</span> 7
+              </div>
+              <div>
+                <span className='font-semibold'>Respondentes:</span> 6
+              </div>
+            </div>
+            <div>
+              <table className='text-center'>
+                <thead className='border-b-2 border-red'>
+                  <tr>
+                    <th className='p-2'>Perfil dos Respondentes</th>
+                    <th className='p-2'>Qtd</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <TR>
+                    <TD>Director of Technical Engagement</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Principal Architect in Engineering</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Squad Leader</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Master Developer</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>Mid-level Developer</TD>
+                    <TD>1</TD>
+                  </TR>
+                  <TR>
+                    <TD>QE</TD>
+                    <TD>1</TD>
+                  </TR>
+                </tbody>
+              </table>
+            </div>
+            <ChartNPS nps={100} />
+          </div>
+          
+        </div>
+
       </div>
       <img src="/pdp/nps.png" alt="nps" className='w-full max-w-[180px] mx-auto mt-12' />
     </Section>
