@@ -9,7 +9,7 @@ const GlobalLayout: React.FC<GlobalLayoutProps> = ({ children }) => {
   return (
     <>
       <Head>
-        <meta name="description" content="Ewerton Augusto Personal Website" />
+        <meta name="description" content="Ewerton Augusto Personal Website. Front-end Developer | Web Developer" />
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
