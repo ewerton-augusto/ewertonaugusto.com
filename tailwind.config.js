@@ -22,9 +22,6 @@ module.exports = {
         home: "url('/pdp/background.jpg')",
       },
     },
-    screens: {
-      desktop: '1728px',
-    },
   },
   plugins: [],
 };
