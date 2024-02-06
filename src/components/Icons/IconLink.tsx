@@ -20,7 +20,7 @@ const IconLink: React.FC<IconLinkProps> = ({
 }) => {
   return (
     <a href={url} target={target} title={label} aria-label={label}>
-      <i className={`${icon} ${textColor} ${textSize} hover:text-primary hover:opacity-80`} />
+      <i className={`${icon} ${textColor} ${textSize} hover:text-primary dark:hover:text-primary hover:opacity-80`} />
     </a>
   );
 };

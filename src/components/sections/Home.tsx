@@ -1,6 +1,7 @@
 import React from 'react';
 import IconLink from '../Icons/IconLink';
 import { IconType } from '../Icons/types';
+import DarkMode from '../darkMode/DarkMode';
 
 const HomeSection: React.FC = () => {
   const socialMedia = [
@@ -22,13 +23,16 @@ const HomeSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-black">
+    <section className="w-full bg-white dark:bg-black">
       <div className="max-w-screen-desktop min-h-screen mx-auto px-4 py-8 flex flex-col">
+        <div className="w-full text-right">
+          <DarkMode />
+        </div>
         <div className="w-full text-center" title="Ewerton Augusto - Software Developer">
-          <i className={`${IconType.LOGO} text-white text-[76px]`} />
+          <i className={`${IconType.LOGO} text-black dark:text-white text-[76px]`} />
         </div>
         <div className="flex-1 flex justify-between items-center lg:flex-col">
-          <div className="text-white max-w-3xl font-extralight">
+          <div className="text-black dark:text-white max-w-3xl font-extralight">
             <h1 className="text-5xl mb-6 tracking-wide leading-snug">
               Hi, I am{' '}
               <strong className="text-primary">Ewerton Augusto a Front-end Developer</strong>.
@@ -39,21 +43,19 @@ const HomeSection: React.FC = () => {
               , even though you can contact me on my social media.
             </h2>
           </div>
-          <div>
-            <ul className="flex flex-col justify-center items-center gap-12">
-              {socialMedia.map((media) => (
-                <li key={media.url}>
-                  <IconLink
-                    icon={media.icon}
-                    label={media.label}
-                    url={media.url}
-                    textColor="text-white"
-                    textSize="text-[24px]"
-                  />
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="flex flex-col justify-center items-center gap-12">
+            {socialMedia.map((media) => (
+              <li key={media.url}>
+                <IconLink
+                  icon={media.icon}
+                  label={media.label}
+                  url={media.url}
+                  textColor="dark:text-white"
+                  textSize="text-[24px]"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
