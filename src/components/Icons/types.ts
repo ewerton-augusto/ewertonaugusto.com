@@ -1,0 +1,16 @@
+export enum IconType {
+  LOGO = 'icon-ewerton-augusto-logo',
+  BURGER_SOLID = 'icon-burger-solid',
+  CAKE_CANDLES_SOLID = 'icon-cake-candles-solid',
+  CALENDAR_DAY_SOLID = 'icon-calendar-day-solid',
+  HAND_HOLDING_DOLLAR_SOLID = 'icon-hand-holding-dollar-solid',
+  STOPWATCH_20_SOLID = 'icon-stopwatch-20-solid',
+  UMBRELLA_BEACH_SOLID = 'icon-umbrella-beach-solid',
+  USERS_SOLID = 'icon-users-solid',
+  MOON_SOLID_1 = 'icon-moon-solid-1',
+  SUN_SOLID = 'icon-sun-solid',
+  ENVELOPE = 'icon-envelope',
+  GITHUB = 'icon-github',
+  INSTAGRAM = 'icon-instagram',
+  LINKEDIN = 'icon-linkedin',
+}

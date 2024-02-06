@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { HTMLAttributeAnchorTarget } from 'react';
+import { IconType } from './types';
 
 type IconLinkProps = {
   url: string;
-  target?: "_blank" | "_parent" | "_self" | "_top";
-  icon: string;
+  icon: IconType;
   label: string;
-}
+  target?: HTMLAttributeAnchorTarget;
+  textColor?: string;
+  textSize?: string;
+};
 
 const IconLink: React.FC<IconLinkProps> = ({
   url,
-  target = "_blank",
+  target = '_blank',
   icon,
   label,
+  textColor = 'text-black',
+  textSize = 'text-[16px]',
 }) => {
   return (
-    <a href={url} target={target} >
-      <div className='flex gap-3 items-center justify-start text-primary hover:opacity-80 hover:underline'>
-        <i className={icon}></i>
-        {label}
-      </div>
+    <a href={url} target={target} title={label} aria-label={label}>
+      <i className={`${icon} ${textColor} ${textSize} hover:text-primary hover:opacity-80`} />
     </a>
   );
-}
+};
 
 export default IconLink;
