@@ -24,12 +24,11 @@ const DarkMode: React.FC = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="bg-transparent border-none text-black dark:text-white hover:text-primary dark:hover:text-primary"
+      className="bg-transparent border-none text-black dark:text-white hover:text-primary dark:hover:text-primary transition duration-400"
       aria-label={label}
       title={label}
-      suppressHydrationWarning
     >
-      <span className="text-[24px]" suppressHydrationWarning>
+      <span className="text-[24px]">
         {resolvedTheme === Themes.DARK ? (
           <i className={IconType.SUN_SOLID} />
         ) : (

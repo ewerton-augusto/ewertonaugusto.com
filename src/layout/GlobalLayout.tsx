@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
-import Header from '../components/sections/Header';
+import { Header, Footer } from '../components/sections/index';
 
 type GlobalLayoutProps = {
   children: React.ReactNode;
@@ -19,11 +19,14 @@ const GlobalLayout: React.FC<GlobalLayoutProps> = ({ children, title }) => {
         <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="use-credentials" />
-        <title>Ewerton Augusto {title && `| ${title}`}</title>
+        <title>{title && `${title} | `}Ewerton Augusto</title>
       </Head>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <Header />
-        <main>{children}</main>
+        <div className="flex flex-col gap-1 min-h-screen">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </ThemeProvider>
     </>
   );

@@ -17,5 +17,9 @@ module.exports = {
       white: '#F9F9F9',
       black: '#060606',
     },
+    container: {
+      center: true,
+      padding: '1rem',
+    },
   },
 };

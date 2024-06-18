@@ -3,9 +3,11 @@ import GlobalLayout from '../layout/GlobalLayout';
 
 const Experiences: React.FC = () => (
   <GlobalLayout title="Experiences">
-    <section className="w-full bg-white dark:bg-black">
-      <h1>Experiences</h1>
-    </section>
+    <main className="flex-1 w-full">
+      <section className="container">
+        <h1>Experiences</h1>
+      </section>
+    </main>
   </GlobalLayout>
 );
 

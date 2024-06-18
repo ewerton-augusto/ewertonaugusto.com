@@ -1,29 +1,11 @@
 import React from 'react';
 import IconLink from '../atoms/Icons/IconLink';
-import { IconType } from '../atoms/Icons/types';
+import { socials } from '../../data/socials';
 
 const HomeSection: React.FC = () => {
-  const socialMedia = [
-    {
-      label: 'LinkedIn',
-      icon: IconType.LINKEDIN,
-      url: 'https://www.linkedin.com/in/ewerton-augusto/',
-    },
-    {
-      label: 'GitHub',
-      icon: IconType.GITHUB,
-      url: 'https://github.com/ewerton-augusto',
-    },
-    {
-      label: 'E-mail',
-      icon: IconType.ENVELOPE,
-      url: 'mailto:ewerton.santos2210@gmail.com',
-    },
-  ];
-
   return (
-    <section className="w-full">
-      <div className="max-w-[1728px] min-h-screen mx-auto px-4 py-8 flex flex-col">
+    <main className="flex-1 w-full relative">
+      <div className="container flex flex-col">
         <div className="flex-1 flex justify-between max-lg:justify-around items-center max-lg:flex-col">
           <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center">
             <h1 className="text-5xl max-lg:text-4xl mb-6 tracking-wide leading-snug">
@@ -37,7 +19,7 @@ const HomeSection: React.FC = () => {
             </h2>
           </div>
           <ul className="flex max-lg:flex-row flex-col justify-center items-center gap-12">
-            {socialMedia.map((media) => (
+            {socials.map((media) => (
               <li key={media.url}>
                 <IconLink
                   icon={media.icon}
@@ -51,7 +33,10 @@ const HomeSection: React.FC = () => {
           </ul>
         </div>
       </div>
-    </section>
+      {/* <div className='-z-10 text-[200px] font-extrabold text-white/10 uppercase absolute bottom-0 left-0 tracking-[.75em]'>
+        tech
+      </div> */}
+    </main>
   );
 };
 
