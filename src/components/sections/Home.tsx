@@ -1,7 +1,6 @@
 import React from 'react';
-import IconLink from '../Icons/IconLink';
-import { IconType } from '../Icons/types';
-import DarkMode from '../darkMode/DarkMode';
+import IconLink from '../atoms/Icons/IconLink';
+import { IconType } from '../atoms/Icons/types';
 
 const HomeSection: React.FC = () => {
   const socialMedia = [
@@ -23,14 +22,8 @@ const HomeSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-white dark:bg-black">
+    <section className="w-full">
       <div className="max-w-[1728px] min-h-screen mx-auto px-4 py-8 flex flex-col">
-        <div className="w-full text-right">
-          <DarkMode />
-        </div>
-        <div className="w-full text-center" title="Ewerton Augusto - Software Developer">
-          <i className={`${IconType.LOGO} text-black dark:text-white text-[76px]`} />
-        </div>
         <div className="flex-1 flex justify-between max-lg:justify-around items-center max-lg:flex-col">
           <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center">
             <h1 className="text-5xl max-lg:text-4xl mb-6 tracking-wide leading-snug">
