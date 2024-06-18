@@ -1,4 +1,8 @@
 {
+  "name": "ea-personal-website",
+  "version": "0.0.1",
+  "description": "Personal Website",
+  "author": "Ewerton Augusto",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -7,8 +11,11 @@
     "format": "prettier --write .",
     "postinstall": "husky install"
   },
+  "engines": {
+    "node": "20"
+  },
   "dependencies": {
-    "next": "^13.4.4",
+    "next": "^14.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
