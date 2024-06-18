@@ -61,7 +61,9 @@ const Menu: React.FC = () => {
                 <div className="px-6 py-2 transition duration-500 rounded-md hover:backdrop-blur-sm hover:bg-black/5 dark:hover:bg-white/10 ">
                   <span>{name}</span>
                   <div
-                    className={currentPath === path ? 'border-b-2 border-primary rounded-md w-1/3' : ''}
+                    className={
+                      currentPath === path ? 'border-b-2 border-primary rounded-md w-1/3' : ''
+                    }
                   />
                 </div>
               )}
