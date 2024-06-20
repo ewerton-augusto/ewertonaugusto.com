@@ -6,7 +6,7 @@ const HomeSection: React.FC = () => {
   return (
     <main className="flex-1 w-full relative">
       <section className="container flex flex-col min-h-screen relative bg-cover bg-top bg-home bg-opacity-20 bg-opacity-70">
-        <div className='bg-cover bg-center'></div>
+        <div className="bg-cover bg-center"></div>
         <div className="flex-1 flex justify-between max-lg:justify-around items-center max-lg:flex-col">
           <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center ">
             <h1 className="text-5xl max-lg:text-4xl mb-6 tracking-wide leading-snug">
