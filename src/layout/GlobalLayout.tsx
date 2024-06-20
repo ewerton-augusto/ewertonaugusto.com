@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
-import { Header, Footer } from '../components/sections/index';
+import { Header, Footer } from '../components';
 
 type GlobalLayoutProps = {
   children: React.ReactNode;
@@ -22,7 +22,7 @@ const GlobalLayout: React.FC<GlobalLayoutProps> = ({ children, title }) => {
         <title>{title && `${title} | `}Ewerton Augusto</title>
       </Head>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <div className="flex flex-col gap-1 min-h-screen">
+        <div className="flex flex-col gap-12 min-h-screen py-4">
           <Header />
           {children}
           <Footer />

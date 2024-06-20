@@ -1,12 +1,7 @@
+import { Socials } from '../@types';
 import { IconType } from '../components/atoms/Icons/types';
 
-type Socials = {
-  label: string;
-  icon: IconType;
-  url: string;
-};
-
-const socials: Socials[] = [
+export const socials: Socials[] = [
   {
     label: 'LinkedIn',
     icon: IconType.LINKEDIN,
@@ -28,5 +23,3 @@ const socials: Socials[] = [
     url: 'mailto:ewerton.santos2210@gmail.com',
   },
 ];
-
-export { socials };

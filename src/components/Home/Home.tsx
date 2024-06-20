@@ -1,5 +1,5 @@
 import React from 'react';
-import IconLink from '../atoms/Icons/IconLink';
+import { ButtonLink, IconLink } from '../';
 import { socials } from '../../data/socials';
 
 const HomeSection: React.FC = () => {
@@ -7,7 +7,7 @@ const HomeSection: React.FC = () => {
     <main className="flex-1 w-full relative">
       <div className="container flex flex-col">
         <div className="flex-1 flex justify-between max-lg:justify-around items-center max-lg:flex-col">
-          <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center">
+          <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center ">
             <h1 className="text-5xl max-lg:text-4xl mb-6 tracking-wide leading-snug">
               Hi, I am{' '}
               <strong className="text-primary">Ewerton Augusto a Front-end Developer</strong>.

@@ -1,0 +1,10 @@
+export { default as CompanyLogo } from './atoms/CompanyLogo/CompanyLogo';
+export { default as DarkModeToggle } from './atoms/DarkModeToggle/DarkModeToggle';
+export { default as IconLink } from './atoms/Icons/IconLink';
+export { default as Menu } from './atoms/Menu/Menu';
+export { default as TimeLine } from './atoms/TimeLine/TimeLine';
+export { default as ButtonLink } from './atoms/ButtonLink/ButtonLink';
+
+export { default as Header } from './Header/Header';
+export { default as HomeSection } from './Home/Home';
+export { default as Footer } from './Footer/Footer';

@@ -1,11 +1,11 @@
 import React from 'react';
 import GlobalLayout from '../layout/GlobalLayout';
-import HomeSection from '../components/sections/Home';
+import { HomeSection } from '../components';
 
-const Home: React.FC = () => (
+const HomeIndex: React.FC = () => (
   <GlobalLayout>
     <HomeSection />
   </GlobalLayout>
 );
 
-export default Home;
+export default HomeIndex;

@@ -3,12 +3,11 @@ import { socials } from '../../data/socials';
 import { IconType } from '../atoms/Icons/types';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
   return (
-    <footer className="container flex flex-col justify-center items-center my-4 gap-4 md:my-12 md:gap-12 text-black dark:text-white">
+    <footer className="container w-full flex flex-col justify-center items-center gap-4 md:gap-12 text-black dark:text-white">
       <div className="w-full flex justify-center items-center mx-auto">
         <div className="bg-gradient-to-l from-black dark:from-white w-full h-[2px] flex-1"></div>
-        <div className="text-[40px] px-14">
+        <div className="text-[40px] max-md:px-8 px-14">
           <i className={IconType.LOGO} />
         </div>
         <div className="bg-gradient-to-r from-black dark:from-white w-full h-[2px] flex-1"></div>
@@ -31,7 +30,6 @@ const Footer: React.FC = () => {
           ))}
         </ul>
       </nav>
-      <div className="font-bold text-xs">&copy; {currentYear} | Ewerton Augusto</div>
     </footer>
   );
 };

@@ -1,49 +1,12 @@
-import React, { ReactNode } from 'react';
-import { IconType } from '../atoms/Icons/types';
-import Link from 'next/link';
+import React from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import { MenuItem } from '../../../@types';
 
-const Logo: React.FC = () => (
-  <div className="w-full text-center" title="Ewerton Augusto - Software Developer">
-    <i className={`${IconType.LOGO} text-[76px]`} />
-  </div>
-);
-
-interface MenuItem {
-  name: string;
-  path: string;
-  component?: React.FC;
-}
-
-const Menu: React.FC = () => {
+const Menu: React.FC<{ menus: MenuItem[] }> = ({ menus }) => {
   const currentPath = usePathname();
-
-  const menus: MenuItem[] = [
-    {
-      name: 'about',
-      path: '/about',
-    },
-    {
-      name: 'projects',
-      path: '/projects',
-    },
-    {
-      name: 'home',
-      path: '/',
-      component: Logo,
-    },
-    {
-      name: 'experiences',
-      path: '/experiences',
-    },
-    {
-      name: 'blog',
-      path: '/blog',
-    },
-  ];
-
   return (
-    <nav className="w-full">
+    <nav className="w-full max-md:hidden">
       <ul className="flex w-2/3 mx-auto justify-around items-center gap-4">
         {menus.map(({ name, path, component: Component }) => (
           <li
