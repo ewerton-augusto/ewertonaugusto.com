@@ -7,20 +7,20 @@ export const menus: MenuItem[] = [
     path: '/about',
   },
   {
+    name: 'projects',
+    path: '/projects',
+  },
+  {
     name: 'home',
     path: '/',
     component: Logo,
   },
   {
-    name: 'projects',
-    path: '/projects',
+    name: 'experiences',
+    path: '/experiences',
   },
-  // {
-  //   name: 'experiences',
-  //   path: '/experiences',
-  // },
-  // {
-  //   name: 'blog',
-  //   path: '/blog',
-  // },
+  {
+    name: 'blog',
+    path: '/blog',
+  },
 ];

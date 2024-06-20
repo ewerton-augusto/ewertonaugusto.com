@@ -5,7 +5,7 @@ import { socials } from '../../data/socials';
 const HomeSection: React.FC = () => {
   return (
     <main className="flex-1 w-full relative">
-      <div className="container flex flex-col">
+      <section className="container flex flex-col min-h-screen">
         <div className="flex-1 flex justify-between max-lg:justify-around items-center max-lg:flex-col">
           <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center ">
             <h1 className="text-5xl max-lg:text-4xl mb-6 tracking-wide leading-snug">
@@ -32,7 +32,7 @@ const HomeSection: React.FC = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </section>
       {/* <div className='-z-10 text-[200px] font-extrabold text-white/10 uppercase absolute bottom-0 left-0 tracking-[.75em]'>
         tech
       </div> */}

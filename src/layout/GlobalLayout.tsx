@@ -22,7 +22,7 @@ const GlobalLayout: React.FC<GlobalLayoutProps> = ({ children, title }) => {
         <title>{title && `${title} | `}Ewerton Augusto</title>
       </Head>
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <div className="flex flex-col gap-12 min-h-screen py-4">
+        <div className="flex flex-col gap-12 min-h-screen pb-4">
           <Header />
           {children}
           <Footer />

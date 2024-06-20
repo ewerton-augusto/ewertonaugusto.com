@@ -21,7 +21,7 @@ const Menu: React.FC<{ menus: MenuItem[] }> = ({ menus }) => {
               {Component ? (
                 <Component />
               ) : (
-                <div className="px-6 py-2 transition duration-500 rounded-md hover:backdrop-blur-sm hover:bg-black/5 dark:hover:bg-white/10 ">
+                <div className="px-6 py-2 transition duration-500 rounded-md hover:bg-black/5 dark:hover:bg-white/20 ">
                   <span>{name}</span>
                   <div
                     className={
