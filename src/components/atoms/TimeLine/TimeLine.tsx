@@ -8,7 +8,7 @@ type Timeline = {
 
 const Timeline: React.FC<Timeline> = ({ experiences }) => {
   return (
-    <div className="relative my-12 pl-4 sm:pl-0">
+    <div className="relative my-4 pl-4 sm:pl-0">
       <div className="absolute sm:left-1/2 sm:transform sm:-translate-x-1/2  h-full border-r-2 border-primary/60 rounded-md -z-10"></div>
       {experiences.map((item, index) => (
         <TimelineItem key={index} {...item} side={index % 2 === 0 ? 'left' : 'right'} />
