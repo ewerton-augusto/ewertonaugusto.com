@@ -26,7 +26,7 @@ const Header: React.FC = () => {
         window.removeEventListener('scroll', controlNavbar);
       };
     }
-  }, [lastScrollY]);
+  }, [lastScrollY, controlNavbar]);
 
   return (
     <header
