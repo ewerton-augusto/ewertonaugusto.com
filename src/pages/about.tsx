@@ -33,7 +33,7 @@ const About: React.FC = () => (
           </div>
         </div>
       </section>
-      <section className='min-h-screen'>
+      <section className="min-h-screen">
         <TimeLine experiences={experiences} />
       </section>
     </main>

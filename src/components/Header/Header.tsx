@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const isLastScrollYSet = useMemo(() => lastScrollY > 0, [lastScrollY])
+  const isLastScrollYSet = useMemo(() => lastScrollY > 0, [lastScrollY]);
 
   const controlNavbar = () => {
     if (typeof window !== 'undefined') {
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
       };
     }
   }, [lastScrollY]);
-  
+
   return (
     <header
       className={`
