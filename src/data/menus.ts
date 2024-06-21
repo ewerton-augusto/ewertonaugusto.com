@@ -16,11 +16,11 @@ export const menus: MenuItem[] = [
     component: Logo,
   },
   {
-    name: 'experiences',
-    path: '/experiences',
-  },
-  {
     name: 'blog',
     path: '/blog',
+  },
+  {
+    name: 'recommendations',
+    path: '/recommendations',
   },
 ];

@@ -1,12 +1,12 @@
 import React from 'react';
-import { IconLink } from '../';
-import { socials } from '../../data/socials';
+import { IconLink } from '../..';
+import { socials } from '../../../data/socials';
 
 const HomeSection: React.FC = () => {
   return (
     <main className="flex-1 w-full">
-      <div className='bg-cover bg-top bg-home-2 -z-10'>
-        <section className="flex flex-col min-h-screen bg-white/50 dark:bg-black/50">
+      <div className="bg-cover bg-top bg-home -z-10">
+        <section className="flex flex-col min-h-screen bg-white/80 dark:bg-black/60">
           <div className="flex-1 container flex justify-between max-lg:justify-around items-center max-lg:flex-col">
             <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center ">
               <h1 className="text-5xl max-lg:text-4xl mb-6 tracking-wide leading-snug">
@@ -15,8 +15,9 @@ const HomeSection: React.FC = () => {
                 Thanks for visiting my website.
               </h1>
               <h2 className="text-lg max-sm:text-sm">
-                At the moment <span className="font-bold text-primary">it is under construction</span>
-                , even though you can contact me on my social media.
+                At the moment{' '}
+                <span className="font-bold text-primary">it is under construction</span>, even
+                though you can contact me on my social media.
               </h2>
             </div>
             <ul className="flex max-lg:flex-row flex-col justify-center items-center gap-12">

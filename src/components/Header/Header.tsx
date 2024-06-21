@@ -31,10 +31,9 @@ const Header: React.FC = () => {
   return (
     <header
       className={`
-        w-full fixed top-0 left-0 transition-transform duration-300 z-20 py-4
-        backdrop-blur-sm bg-white/80 dark:bg-black/80
+        w-full fixed top-0 left-0 transition-transform duration-300 z-20 py-4 backdrop-blur-sm 
         ${isVisible ? 'transform translate-y-0' : 'transform -translate-y-full'}
-        ${isLastScrollYSet ? 'shadow-md' : ''}
+        ${isLastScrollYSet ? 'shadow-md bg-white/80 dark:bg-black/80' : ''}
       `}
     >
       <div className="container">
