@@ -8,17 +8,17 @@ enum Themes {
 }
 
 const DarkModeToggle: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
+  // const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const label = useMemo(() => `${resolvedTheme} mode`, [resolvedTheme]);
 
   const toggleDarkMode = () => setTheme(resolvedTheme === Themes.DARK ? Themes.LIGHT : Themes.DARK);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  // useEffect(() => {
+  //   setMounted(true);
+  // }, []);
 
-  if (!mounted) return <></>;
+  // if (!mounted) return <></>;
 
   return (
     <button
