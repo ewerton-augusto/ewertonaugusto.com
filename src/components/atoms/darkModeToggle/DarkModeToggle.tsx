@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useMemo, useState } from 'react';
 import { IconType } from '../Icons/types';
 import { useTheme } from 'next-themes';
