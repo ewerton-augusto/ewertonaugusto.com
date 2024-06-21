@@ -8,7 +8,7 @@ enum Themes {
   LIGHT = 'light',
 }
 
-const DarkMode: React.FC = () => {
+const DarkModeToggle: React.FC = () => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
   const label = useMemo(() => `${resolvedTheme} mode`, [resolvedTheme]);
@@ -39,4 +39,4 @@ const DarkMode: React.FC = () => {
   );
 };
 
-export default DarkMode;
+export default DarkModeToggle;
