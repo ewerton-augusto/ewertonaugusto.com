@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { IconType } from '../Icons/types';
 import { useTheme } from 'next-themes';
+import { IconType } from '../Icons/types';
 
 enum Themes {
   DARK = 'dark',
@@ -18,7 +18,7 @@ const DarkModeToggle: React.FC = () => {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) return <></>;
 
   return (
     <button

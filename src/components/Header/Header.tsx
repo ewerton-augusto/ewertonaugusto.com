@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Menu } from '../';
+import { Menu, DarkModeToggle } from '../';
 import { menus } from '../../data/menus';
-import DarkModeToggle from '../atoms/DarkModeToggle/DarkModeToggle';
 
 const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
