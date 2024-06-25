@@ -15,11 +15,11 @@ const AboutSection: React.FC = () => {
             />
           </div>
           <div>
-            <h1 className="font-semibold text-3xl mb-6">
+            <div className="font-semibold text-3xl mb-6">
               <span className="text-dark-purple">Journey.</span>
               <span className="text-primary">Career.</span>
               <span className="text-light-purple">Personal Life.</span>
-            </h1>
+            </div>
             <div className="w-full max-w-md leading-loose flex flex-col gap-4 font-medium">
               <p>
                 With over 11 years of professional experience in the technology field, I have

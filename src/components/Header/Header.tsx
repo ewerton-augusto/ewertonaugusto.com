@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Menu, DarkModeToggle } from '../';
 import { menus } from '../../data/menus';
 
@@ -8,16 +8,12 @@ const Header: React.FC = () => {
 
   const isLastScrollYSet = useMemo(() => lastScrollY > 0, [lastScrollY]);
 
-  const controlNavbar = () => {
+  const controlNavbar = useCallback(() => {
     if (typeof window !== 'undefined') {
-      if (window.scrollY > lastScrollY) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
+      setIsVisible(!Boolean(window.scrollY > lastScrollY));
       setLastScrollY(window.scrollY);
     }
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

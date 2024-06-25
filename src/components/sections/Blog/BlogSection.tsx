@@ -5,11 +5,11 @@ const BlogSection: React.FC = () => {
     <main className="w-full">
       <section className="container min-h-screen flex justify-center items-center">
         <div>
-          <h1 className="font-semibold text-3xl mb-6">
+          <div className="font-semibold text-3xl mb-6">
             <span className="text-dark-purple">Share.</span>
             <span className="text-primary">Learn.</span>
             <span className="text-light-purple">Colaborate.</span>
-          </h1>
+          </div>
           <p>It is under construction</p>
         </div>
       </section>
