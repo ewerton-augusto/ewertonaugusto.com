@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Menu, DarkModeToggle } from '../';
+import { Menu, ThemeToggle } from '../';
 import { menus } from '../../data/menus';
 
 const Header: React.FC = () => {
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     >
       <div className="container">
         <div className="w-full text-right">
-          <DarkModeToggle />
+          <ThemeToggle />
         </div>
         <Menu menus={menus} />
       </div>
