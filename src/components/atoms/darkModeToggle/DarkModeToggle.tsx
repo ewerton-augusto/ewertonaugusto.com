@@ -17,7 +17,7 @@ const DarkModeToggle: React.FC = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
-  
+
   if (!mounted) return <></>;
 
   return (

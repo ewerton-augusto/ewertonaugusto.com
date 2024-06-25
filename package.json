@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "postinstall": "husky install"
+    "prepare": "husky"
   },
   "engines": {
     "node": "20"
