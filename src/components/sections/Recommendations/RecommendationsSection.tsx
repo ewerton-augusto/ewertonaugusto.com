@@ -10,7 +10,9 @@ const RecommendationsSection: React.FC = () => {
             <span className="text-primary">Useful.</span>
             <span className="text-light-purple">Benefits.</span>
           </div>
-          <p className='font-extralight text-sm sm:text-base lg:text-lg'>It is under construction</p>
+          <p className="font-extralight text-sm sm:text-base lg:text-lg">
+            It is under construction
+          </p>
         </div>
       </section>
     </main>

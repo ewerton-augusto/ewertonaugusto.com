@@ -14,7 +14,7 @@ const AboutSection: React.FC = () => {
               alt="Ewerton Santos"
             />
           </div>
-          <div className='flex flex-col gap-8'>
+          <div className="flex flex-col gap-8">
             <div className="font-bold text-2xl sm:text-3xl lg:text-4xl">
               <span className="text-dark-purple">Journey.</span>
               <span className="text-primary">Career.</span>
