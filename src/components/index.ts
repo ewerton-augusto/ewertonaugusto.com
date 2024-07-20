@@ -1,6 +1,5 @@
 export { default as ButtonLink } from './atoms/ButtonLink/ButtonLink';
 export { default as CompanyLogo } from './atoms/CompanyLogo/CompanyLogo';
-// export { default as DarkModeToggle } from './atoms/DarkModeToggle/DarkModeToggle';
 export { default as IconLink } from './atoms/Icons/IconLink';
 export { default as Logo } from './atoms/Logo/Logo';
 export { default as Menu } from './atoms/Menu/Menu';

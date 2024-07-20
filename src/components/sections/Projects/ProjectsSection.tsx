@@ -5,12 +5,12 @@ const ProjectsSection: React.FC = () => {
     <main className="w-full">
       <section className="container min-h-screen flex justify-center items-center">
         <div>
-          <div className="font-semibold text-3xl mb-6">
+        <div className="font-bold text-2xl sm:text-3xl lg:text-4xl">
             <span className="text-dark-purple">Ideias.</span>
-            <span className="text-primary">Actions.</span>
-            <span className="text-light-purple">Colaborations.</span>
+            <span className="text-primary">Action.</span>
+            <span className="text-light-purple">Colaboration.</span>
           </div>
-          <p>It is under construction</p>
+          <p className='font-extralight text-sm sm:text-base lg:text-lg'>It is under construction</p>
         </div>
       </section>
     </main>
