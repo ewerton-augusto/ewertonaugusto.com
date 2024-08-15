@@ -11,11 +11,16 @@ module.exports = {
   darkMode: 'class',
   theme: {
     colors: {
-      primary: '#BF7AE7',
-      'dark-purple': '#3E1D68',
-      'light-purple': '#BE8BFF60',
-      white: '#F9F9F9',
-      black: '#060606',
+      // primary: '#BF7AE7',
+    // primary: '#6B4226',
+    primary: '#8B5E34',
+      'dark-purple': '#5A3E2B',
+      'light-purple': '#704214',
+      white: '#FAFAFA',
+      // black: '#060606',
+      black: '#2C2C2C',
+      'blue': '#4169E1',
+      'marrom':'#6B4226'
     },
     container: {
       center: true,

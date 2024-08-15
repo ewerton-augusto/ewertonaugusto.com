@@ -3,7 +3,7 @@ import GlobalLayout from '../layout/GlobalLayout';
 import { RecommendationsSection } from '../components';
 
 const Experiences: React.FC = () => (
-  <GlobalLayout title="Experiences">
+  <GlobalLayout title="Recommendations">
     <RecommendationsSection />
   </GlobalLayout>
 );

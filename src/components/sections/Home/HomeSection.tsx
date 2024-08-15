@@ -5,7 +5,7 @@ import { socials } from '../../../data/socials';
 const HomeSection: React.FC = () => {
   return (
     <main className="flex-1 w-full">
-      <div className="bg-cover bg-top bg-home -z-10">
+      <div className="bg-cover bg-top -z-10">
         <section className="flex flex-col min-h-screen bg-white/80 dark:bg-black/60">
           <div className="flex-1 container flex justify-between max-lg:justify-around items-center max-lg:flex-col">
             <div className="text-black dark:text-white max-w-3xl font-extralight max-lg:text-center ">

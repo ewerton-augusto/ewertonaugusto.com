@@ -1,5 +1,4 @@
 import React from 'react';
-import { TimeLine } from '../..';
 import { experiences } from '../../../data/experiences';
 
 const AboutSection: React.FC = () => {
@@ -37,7 +36,7 @@ const AboutSection: React.FC = () => {
         </div>
       </section>
       <section className="min-h-screen flex justify-center items-center">
-        <TimeLine experiences={experiences} />
+        
       </section>
     </main>
   );
