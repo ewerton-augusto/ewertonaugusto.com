@@ -35,9 +35,7 @@ const AboutSection: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="min-h-screen flex justify-center items-center">
-        
-      </section>
+      <section className="min-h-screen flex justify-center items-center"></section>
     </main>
   );
 };
