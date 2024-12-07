@@ -1,0 +1,38 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn i
+
+      - name: Run lint
+        run: yarn lint
+
+      # TODO: Uncomment the following lines after adding unit and end-to-end tests once implemented
+      # - name: Run unit tests
+      #   run: yarn test:unit
+
+      # - name: Run end-to-end tests
+      #   run: yarn test:e2e
+
+      - name: Build for Web
+        run: yarn build
