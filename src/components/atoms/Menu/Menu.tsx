@@ -1,7 +1,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { MenuItem } from '../../../@types';
+import { MenuItem } from '@/@types';
 
 const Menu: React.FC<{ menus: MenuItem[] }> = ({ menus }) => {
   const currentPath = usePathname();

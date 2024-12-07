@@ -1,10 +1,10 @@
 import React from 'react';
-import { IconType } from '../Icons/types';
+import { Icons } from '@/components/atoms/Icons/IconList';
 
 const Logo: React.FC = () => {
   return (
     <div className="w-full text-center" title="Ewerton Augusto - Software Developer">
-      <i className={`${IconType.LOGO} text-[50px]`} />
+      <i className={`${Icons.LOGO} text-[50px]`} />
     </div>
   );
 };

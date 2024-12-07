@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Menu, ThemeToggle } from '../';
-import { menus } from '../../data/menus';
+import { Menu, ThemeToggle } from '@/components';
+import { menus } from '@/data/menus';
 
 const Header: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);

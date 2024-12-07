@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
-import { Header, Footer } from '../components';
+import { Header, Footer } from '@/components';
 
 type GlobalLayoutProps = {
   children: React.ReactNode;

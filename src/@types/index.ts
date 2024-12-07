@@ -1,4 +1,4 @@
-import { IconType } from '../components/atoms/Icons/types';
+import { Icons } from '../components/atoms/Icons/IconList';
 
 export type MenuItem = {
   name: string;
@@ -16,6 +16,6 @@ export type TimelineItem = {
 
 export type Socials = {
   label: string;
-  icon: IconType;
+  icon: Icons;
   url: string;
 };

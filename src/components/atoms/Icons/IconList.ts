@@ -1,4 +1,4 @@
-export enum IconType {
+export enum Icons {
   LOGO = 'icon-ewerton-augusto-logo',
   BURGER_SOLID = 'icon-burger-solid',
   CAKE_CANDLES_SOLID = 'icon-cake-candles-solid',

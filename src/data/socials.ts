@@ -1,25 +1,25 @@
-import { Socials } from '../@types';
-import { IconType } from '../components/atoms/Icons/types';
+import { Socials } from '@/@types';
+import { Icons } from '@/components/atoms/Icons/IconList';
 
 export const socials: Socials[] = [
   {
     label: 'LinkedIn',
-    icon: IconType.LINKEDIN,
+    icon: Icons.LINKEDIN,
     url: 'https://www.linkedin.com/in/ewerton-augusto/',
   },
   {
     label: 'GitHub',
-    icon: IconType.GITHUB,
+    icon: Icons.GITHUB,
     url: 'https://github.com/ewerton-augusto',
   },
   {
     label: 'Instagram',
-    icon: IconType.INSTAGRAM,
+    icon: Icons.INSTAGRAM,
     url: 'https://www.instagram.com/_ewerton.augusto',
   },
   {
     label: 'ewerton.santos2210@gmail.com',
-    icon: IconType.ENVELOPE,
+    icon: Icons.ENVELOPE,
     url: 'mailto:ewerton.santos2210@gmail.com',
   },
 ];

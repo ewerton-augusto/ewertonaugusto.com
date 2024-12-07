@@ -1,6 +1,6 @@
 import React from 'react';
-import { IconLink } from '../..';
-import { socials } from '../../../data/socials';
+import { IconLink } from '@/components';
+import { socials } from '@/data/socials';
 
 const HomeSection: React.FC = () => {
   return (

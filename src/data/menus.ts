@@ -1,5 +1,5 @@
-import { MenuItem } from '../@types';
-import Logo from '../components/atoms/Logo/Logo';
+import { MenuItem } from '@/@types';
+import Logo from '@/components/atoms/Logo/Logo';
 
 export const menus: MenuItem[] = [
   {

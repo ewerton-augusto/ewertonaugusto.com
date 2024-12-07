@@ -1,6 +1,6 @@
 import React from 'react';
-import { socials } from '../../data/socials';
-import { IconType } from '../atoms/Icons/types';
+import { socials } from '@/data/socials';
+import { Icons } from '@/components/atoms/Icons/IconList';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="w-full flex justify-center items-center mx-auto">
         <div className="bg-gradient-to-l from-black dark:from-white w-full h-[2px] flex-1"></div>
         <div className="text-[40px] max-md:px-8 px-14">
-          <i className={IconType.LOGO} />
+          <i className={Icons.LOGO} />
         </div>
         <div className="bg-gradient-to-r from-black dark:from-white w-full h-[2px] flex-1"></div>
       </div>

@@ -1,9 +1,9 @@
 import React, { HTMLAttributeAnchorTarget } from 'react';
-import { IconType } from './types';
+import { Icons } from './IconList';
 
 type IconLinkProps = {
   url: string;
-  icon: IconType;
+  icon: Icons;
   label: string;
   target?: HTMLAttributeAnchorTarget;
   textColor?: string;

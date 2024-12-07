@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { IconType } from '../Icons/types';
+import { Icons } from '@/components/atoms/Icons/IconList';
 
 enum Themes {
   DARK = 'dark',
@@ -29,9 +29,9 @@ const ThemeToggle: React.FC = () => {
     >
       <span className="text-[24px]">
         {resolvedTheme === Themes.DARK ? (
-          <i className={IconType.SUN_SOLID} />
+          <i className={Icons.SUN_SOLID} />
         ) : (
-          <i className={IconType.MOON_SOLID_1} />
+          <i className={Icons.MOON_SOLID_1} />
         )}
       </span>
     </button>
